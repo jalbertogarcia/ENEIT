@@ -5,7 +5,7 @@ $correo = $_POST["correo"];
 $numTelefonico = $_POST["numTelefonico"];
 $especialidad = $_POST["especialidad"];
 $titulo = $_POST["titulo"];
-$institucion = $_["institucion"];
+$institucion = $_POST["institucion"];
 $insert =  "INSERT INTO  usuario (nombre, correo, numTelefonico, especialidad, titulo, institucion) VALUES ('$nombre', '$correo', '$numTelefonico', '$especialidad', '$titulo', '$institucion')";
 //ejecutar consulta
 $resultado = mysqli_query ($conexion, $insert);
