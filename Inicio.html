@@ -1,86 +1,22 @@
+
+
 <!DOCTYPE html>
+<html lang="es">
 <head>
-
-	<meta charset="utf-8">
-
-	<!-- Always force latest IE rendering engine & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- Put your title here! -->
-	<title></title>
-
-	<meta name="description" content="">
-
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/freelancer.min.css" rel="stylesheet">
-	<!-- Load Open Sans and Merriweather from Google Fonts
-		For optimal performance, customize it to load the styles you need:
-		http://goo.gl/QufgJ
-	-->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,700,900" rel="stylesheet">
-
-	<!-- All JavaScript at the bottom, except for Modernizr
-		Modernizr enables HTML5 elements & feature detects; It includes Respond, a polyfill for min/max-width CSS3 Media Queries
-		For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-	<script src="js/modernizr-2.6.1.min.js"></script>
+	<title> Iniciar Sesion</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+<form action="validar.php" method="post" enctype="application/x-www-form-urlencoded">
+	<h2>Iniciar sesion</h2>
+	<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
+	<input type="password" placeholder="&#128272; Contraseña" name="password" required>
+	<input type="submit" value="Iniciar">
 
-	<!-- Prompt IE 6 and 7 users to install Chrome Frame:		chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 8]>
-		<p class="chromeframe alert alert-warning">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-	<![endif]-->
-
-	<header id="master-header" class="clearfix" role="banner">
-
-		<hgroup>
-			<h1 id="site-title"><a href="index.html" title="Your Site Name"></a>Evaluación ENEIT</h1>
-			<h2 id="site-description">Bienvenido al sitio WEB ENEIT</h2>
-		</hgroup>
-
-	</header> <!-- #master-header -->
-
-	<table align="right">
-                  
-                        
-                        <tr>
-                        <td>
-                            Usuario:
-                        </td>
-                        <td>
-                            <input type="text" id="usuario" name="Usuario"/>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            Contraseña:
-                        </td>
-                        <td>
-                            <input type="text" id="contraseña" name="Contraseña"/>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <input type="submit" values="Entrar" id="entrar" name="Entrar"/>
-                        </td>
-                        
-                        <td>
-                            <input type="reset" values="Cancelar" id="Cancelar" name="Cancelar"/>
-                        </td>
-                    </tr>
-                </table>
-
-
+</form>
+ 
 </body>
-
-<footer id="footer" role="contentinfo">
-		<!-- You're free to remove the credit link to Jayj.dk in the footer, but please, please leave it there :) -->
-		<p>
-			Copyright &copy; 2017 <a href="#">SitemaENEIT.com</a>
-			<span class="sep">|</span>
-			Design by <a href="#">Albert.dk</a>
-		</p>
-	</footer> <!-- #footer -->
-
 </html>
+
