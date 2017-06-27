@@ -24,11 +24,12 @@
 </head>
 
 <body>
+     <form action="registrarEv.php" method="post" onsubmit="return valida();">
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom"><!--color y diseño del menu-->
 	<div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">Modulo de Registro</a>
@@ -38,8 +39,6 @@
         <!-- /.container-fluid -->
     </nav>
 
-
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -48,17 +47,17 @@
              <table>
      	        <tr>
      	        <td><label>Nombre:</label></td>
-     	        <td><input type="text"></td>
+     	        <td><input type="text" id="nombre" name="nombre"></td>
                 </tr>
 
      	        <tr>
      	        <td><label>Correo:</label></td>
-     	        <td><input type="email" id="" placeholder="correo@ejemplo.com" ></td>
+     	        <td><input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" ></td>
      	        </tr>
 
      	        <tr>
      	        	<td><label>Telefono:</label></td>
-     	        	<td><input type="text" id=""></td>
+     	        	<td><input type="text" name="numTelefonico" id="telefono"></td>
      	        </tr>
 
      	        <tr>
@@ -83,10 +82,11 @@
      	        <tr>
      	        	<td><label>Titulo:</label></td>
      	        	<td>
-     	        	<select>
-     	        		<option value="">Maestro</option>
-     	        		<option value="">Director</option>
-     	        		<option value="">Asesor</option>
+     	        	<select name="titulo">
+     	        		<option value="ing">Ingeniero</option>
+     	        		<option value="lic">Licenciado</option>
+     	        		<option value="tec">Tecnico</option>
+                        <option value="doc">Doctor</option>
      	        	</select>
      	        	</td>
      	        </tr>
@@ -95,18 +95,20 @@
      	        	<td><label>Institucion:</label></td>
      	        	<td>
      	        		<select>
+                            <option value="itsoeh">Univercidad Tecnológica del Occidente del Estado de Hidalgo</option>
      	        			<option value="uth">Univercidad Tecnológica de la Huasteca Hidalguense</option>
      	        			<option value="ut">Univercidad Tecnológica de la Sierra Hidalguense</option>
      	        			<option value="uttt">Univercidad Tecnológica de Tula Tepeji</option>
      	        			<option value="ute">Univercidad Tecnológica de Tulancingo</option>
      	        			<option value="uttvm">Univercidad Tecnológica del Valle del Mezquital</option>
-     	        			<option value="itsoeh">Univercidad Tecnológica del Occidente del Estado de Hidalgo</option>
      	        		</select>
      	        	</td>
      	        </tr>
                
 				<td>
-				<input type="submit" value="enviar" id="btn-enviar" name="subir"> </td>
+                <form action="" metodh="post" >
+                    <input type="submit" value="enviar" id="enviar" name="subir"> </td>
+                </form>
 		         </tr>
 
 		        
@@ -192,6 +194,6 @@
     <script src="js/freelancer.min.js"></script>
 
 
-
+</form>
 </body>
 </html>
