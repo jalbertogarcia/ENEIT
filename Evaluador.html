@@ -1,0 +1,23 @@
+<?php 
+session_start();
+if (isset($_SESSION['correo'])) {
+    if ($_SESSION['correo']['tipo']!= "Evaluador") {
+      header('location: Index.html');
+    }
+    
+}else{
+header('location: Evaluador.html');
+}
+ ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina del evaluador</title>
+</head>
+<body>
+<h1 align="center">Esta es la pagina del evaluador</h1>
+<h2 align="center"> Bienvenido <?php echo $_SESSION['correo']['nombre']; ?></h2>
+</body>
+</html>
