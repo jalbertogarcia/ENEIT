@@ -9,13 +9,13 @@ $usuario = $mysqli->real_escape_string($_POST['usuariolg']);
 $pass = $mysqli->real_escape_string($_POST['passlg']);
 
 if ($nueva_consulta = $mysqli->prepare("SELECT nombre, tipo FROM usuario WHERE correo=? AND password1 =?")) {
-	$nueva_consulta->bind_param('ss', $usuario,$pass);
+	$nueva_consulta->bind_param('ss', $usuario, $pass);
 	$nueva_consulta->execute();
 	$resultado=$nueva_consulta->get_result();
    
    if ($resultado->num_rows==1) {
    	$datos=$resultado->fetch_assoc();
-   	$_SESSION['usuario']=$datos;
+   	$_SESSION['usuario'] = $datos;
    	echo json_encode(array('error' =>false, 'tipo' =>$datos['tipo']));
    }else{
     echo json_encode(array('error' => true));

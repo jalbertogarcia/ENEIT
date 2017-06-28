@@ -1,13 +1,15 @@
 <?php 
 session_start();
-if (isset($_SESSION['usuario'])) {
-    if ($_SESSION['usuario']['tipo']!= "Coordinador") {
-      header('Location: Evaluador.html');
+
+  if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario']['tipo'] != "Coordinador") {
+        header("Location: Evaluador.html");
+    }else{
+        header('Location: index.html');
     }
     
-}else{
-header('Location: index.html');
-}
+  }
+
  ?>
 
 
@@ -55,7 +57,7 @@ header('Location: index.html');
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">Coordinador ENEIT local</a>
-                <h2 align="center"> Bienvenido <?php echo $_SESSION['usuario']['nombre']; ?></h2>
+                <h2 align="center"> Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></h2>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

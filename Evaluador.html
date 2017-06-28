@@ -1,13 +1,15 @@
 <?php 
 session_start();
-if (isset($_SESSION['usuario'])) {
-    if ($_SESSION['usuario']['tipo']!= "Evaluador") {
-      header('Location: index.html');
+
+  if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario']['tipo'] != "Evaluador") {
+        header("Location: index.html");
+    }else{
+        header('Location: Evaluador.html');
     }
     
-}else{
-header('Location: Evaluador.html');
-}
+  }
+
  ?>
 
 <!DOCTYPE html>
