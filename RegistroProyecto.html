@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <form action="categoria.php" method="post" onsubmit="return valida();"><!--!estam adre manda ha hacer el registro-->
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom"><!--color y diseño del menu-->
 	<div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,21 +51,21 @@
 
      	        <tr>
      	        <td><label>Nombre del proyecto</label></td>
-     	        <td><input id="nombrePro" type="text"></td>
+     	        <td><input id="nombrePro" name="nombrePro" type="text"></td>
                 </tr>
 
         
 
                 <tr>
                 <td><label>Categoria</label></td>
-                <td><input id="Categoria" type="text"></td>
+                <td><input id="categoria" name="categoria" type="text"></td>
                 </tr>
 
 
 
                 <tr>
                 <td><label>Ficha Tecnica:</label></td>
-                <td><input id="Ficha" type="text"></td>
+                <td><input id="fichaTecnica" name="fichaTecnica" type="text"></td>
                 </tr>
 
      	        
@@ -80,21 +81,22 @@
                 
                 <tr>
                 <td><label>Nombre integrante</label></td>
-                <td><input id="nombreInt" type="text"></td>
+                <td><input id="nombreInt" name="nombreInt" type="text"></td>
                 </tr>
 
 
 
                 <tr>
                 <td><label>Apellido Paterno</label></td>
-                <td><input id="ApellidoPaIn" type="text"></td>
+                <td><input id="ApellidoPaIn"  name="ApellidoPaternoInt"
+                type="text"></td>
                 </tr>
 
 
 
                 <tr>
                 <td><label>Apellido materno</label></td>
-                <td><input id="ApellidoMaIn" type="text"></td>
+                <td><input id="ApellidoMaIn" name="ApellidoMaternoInt" type="text"></td>
                 </tr>
 
                 
@@ -109,34 +111,63 @@
                 
                 <tr>
                 <td><label>Nombre asesor</label></td>
-                <td><input id="NombreAse" type="text"></td>
+                <td><input id="NombreAse" name="NombreAs" type="text"></td>
                 </tr>
 
 
 
                 <tr>
                 <td><label>Apellido Paterno</label></td>
-                <td><input id="ApellidoPaAse" type="text"></td>
+                <td><input id="ApellidoPaAse" name="ApellidoPaternoAS" type="text"></td>
                 </tr>
 
 
 
                 <tr>
                 <td><label>Apellido materno</label></td>
-                <td><input id="ApellidoMaASe" type="text"></td>
+                <td><input id="ApellidoMaASe" name="ApellidoMaternoAS"type="text"></td>
                 </tr>
 
                 
 
 
-             </table>
+             </table>-->
 
 
-
+ 
+                
 
      
-     <button type="submite" value="Submite" ng-click="addItem()" >ACEPTAR</button>
-     <button type="reset" value="Reset" ng-click="addItem()" >CANCELAR</button>
+        <form action="" metodh="post" >
+                    <input type="submit" value="enviar" id="enviar" name="subir" > </td>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <form action="" metodh="post" >
+                    <input type="reset" value="cancelar" id="cancelar" name="cancelar"> </td>
+                </form>
+     
+     
      
 
 
@@ -157,6 +188,6 @@
      <!-- Footer -->
     
 
-
+</form>
 </body>
 </html>
