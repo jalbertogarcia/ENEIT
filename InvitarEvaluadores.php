@@ -45,9 +45,8 @@
                  $Con = new conexion();
                  $Con->recuperarDatos();
                 ?>
-                </td>
-                
-                <td><input input type="checkbox"></td>
+                </td>             
+          
                 </tr>
       </table></center></p>
                <p><center>
@@ -68,10 +67,10 @@
                 Jose Luis Oviedo</textarea></td>
                 </tr>
                 <tr>
+                
                 <td><center><input type="submit" value="Enviar Invitacion" id="btn-enviar" name="subir"></center></td></tr>
              </table></center></p>
-            
-        
+          
         <!--terminacion de mi diseño-->
 
             <div class="row">

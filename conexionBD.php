@@ -13,7 +13,7 @@
 
          	while ($fila = mysql_fetch_array($resultado)) {
          		echo "<tr>";
-         		echo "<td> $fila[nombre] <td> $fila[correo] </td><br>" ;
+         		echo "<td> $fila[nombre] </td> <td>$fila[correo] </td><br>" ;
          		echo "</tr>";
          	} 
          }
