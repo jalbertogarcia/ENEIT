@@ -16,17 +16,29 @@ include 'conexion.php';
 
 
   $insertar =  "INSERT INTO  proyecto (nombrePro,categoria,fichaTecnica) VALUES ('$nombrePro', '$categoria', '$fichaTecnica')"; 
-  //mysql_query($insertar, $conexion);
+   $resu = mysqli_query($conexion, $insertar);
+  
+ 
   $inserttres =  "INSERT INTO asesor(NombreAs,ApellidoPaternoAS,ApellidoMaternoAS) VALUES ('$NombreAs', '$ApellidoPaternoAS', '$ApellidoMaternoAS')"; 
-  //mysql_query($inserttres, $conexion);
+  $resultadoses = mysqli_query ($conexion, $inserttres);
+
+
+
+
+
+
   $insertdos = "INSERT INTO integrantes (nombreInt,ApellidoPaternoInt,ApellidoMaternoInt) VALUES ('$nombreInt', '$ApellidoPaternoInt', '$ApellidoMaternoInt')";
+  $resultado = mysqli_query ($conexion, $insertdos);
+
+   
+
   
 
 
-  $resultado = mysqli_query ($conexion, $inserttres);
-if(!$resultado){
+
+if(!$resultado&!$resultadoses&!$resu){
   echo 'Error al registrar';
 }else{
-  echo 'Evaluador Registrado';
+  echo 'Registro correctoo';
 }
  
