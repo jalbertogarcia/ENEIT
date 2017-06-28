@@ -10,6 +10,7 @@
 
 <!--Checar-->
 <!-- Custom Fonts -->
+    <link rel="stylesheet" href="css/estiloEv.css">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -17,25 +18,24 @@
 
 <body>
      <form action="registrarEv.php" method="post" onsubmit="return valida();">
+     <h1>Modulo de Registro</h1>
     <!-- Header -->
     <header>
-        <div class="container">
-
             <!--Mi Diseño--> 
-             <table border="1">
+             <table>
      	        <tr>
      	        <td><label>Nombre:</label></td>
-     	        <td><input type="text" id="nombre" name="nombre"></td>
+     	        <td><input type="text" id="nombre" name="nombre" required></td>
                 </tr>
 
      	        <tr>
      	        <td><label>Correo:</label></td>
-     	        <td><input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" ></td>
+     	        <td><input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required></td>
      	        </tr>
 
      	        <tr>
      	        	<td><label>Telefono:</label></td>
-     	        	<td><input type="text" name="numTelefonico" id="telefono"></td>
+     	        	<td><input type="text" name="numTelefonico" id="telefono" required></td>
      	        </tr>
 
      	        <tr>
@@ -43,6 +43,7 @@
      	        	
      	        	<td>
                     <select name="especialidad">
+                        <option value="Seleccione su Especialidad">Seleccione su Especialidad</option>
      	        		<option value="Administracion de Redes">Administracion de Redes</option>
                         <option value="Administracion en Coputacion">Administracion en Coputacion</option>
                         <option value="Arquitectura en Proyectos">Arquitectura en Proyectos</option>
@@ -62,6 +63,7 @@
      	        	<td><label>Titulo:</label></td>
      	        	<td>
      	        	<select name="titulo">
+                        <option value="Selecciona tu Titulo">Selecciona tu Titulo</option>
      	        		<option value="ing">Ingeniero</option>
      	        		<option value="lic">Licenciado</option>
      	        		<option value="tec">Tecnico</option>
@@ -74,6 +76,7 @@
      	        	<td><label>Institucion:</label></td>
      	        	<td>
      	        		<select name="  institucion">
+                            <option value="Selecciona tu Institucion">Selecciona tu Institucion</option>
                             <option value="itsoeh">Instituto Tecnológico Superior de Occidente del Estado de Hidalgo</option>
      	        			<option value="uth">Universidad Tecnológica de la Huasteca Hidalguense</option>
      	        			<option value="ut">Universidad Tecnológica de la Sierra Hidalguense</option>
@@ -89,18 +92,8 @@
                     <input type="submit" value="enviar" id="enviar" name="subir"> </td>
                 </form>
 		         </tr>
-
-		        
              </table>
-        
         <!--terminacion de mi diseño-->
-
-            <div class="row">
-                <div class="col-lg-12">
-                     <iframe src="" name="contenido" id="contenido" width="600" height="600" style="border:0px;"> </iframe>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
