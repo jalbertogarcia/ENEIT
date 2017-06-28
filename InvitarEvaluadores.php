@@ -39,9 +39,14 @@
          <table>
                 <h1>INVITACION PARA POSIBLES EVALUADORES</h1>
               <tr>
-                <td><label>Destinatarios: </label></td>
-                <td><input input type="label"></td>
-                <td><input input type="checkbox"></td>
+                <td><label>Destinatarios: </label>
+                <?php
+                 include ("conexionBD.php");
+                 $Con = new conexion();
+                 $Con->recuperarDatos();
+                ?>
+                </td>             
+          
                 </tr>
       </table></center></p>
                <p><center>
@@ -62,10 +67,10 @@
                 Jose Luis Oviedo</textarea></td>
                 </tr>
                 <tr>
+                
                 <td><center><input type="submit" value="Enviar Invitacion" id="btn-enviar" name="subir"></center></td></tr>
              </table></center></p>
-            
-        
+          
         <!--terminacion de mi diseño-->
 
             <div class="row">
