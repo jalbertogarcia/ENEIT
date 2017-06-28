@@ -39,8 +39,14 @@
          <table>
                 <h1>INVITACION PARA POSIBLES EVALUADORES</h1>
               <tr>
-                <td><label>Destinatarios: </label></td>
-                <td><input input type="label"></td>
+                <td><label>Destinatarios: </label>
+                <?php
+                 include ("conexionBD.php");
+                 $Con = new conexion();
+                 $Con->recuperarDatos();
+                ?>
+                </td>
+                
                 <td><input input type="checkbox"></td>
                 </tr>
       </table></center></p>
