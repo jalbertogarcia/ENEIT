@@ -18,22 +18,34 @@ h1{
 	color: #fff;
 	text-align: center;
 	margin: 0;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 7px;
 	font-size:30;
 	margin-bottom: 20px;
 }
 input, textarea{
 	width: 100%;
 	margin-bottom: 20px;
-	padding: 7px;
+	padding: 10px;
 	box-sizing: border-box;
-	font-size: 17px;
-	border: none;
+	font-size: 15px;
+	border: 1 solid #ccc;
 }
+/*letra*/
 label{
-	color: #fff;
+	font-size: 20px;
+	display: block;
+	width: 100%;
+	color: white;
+
 }
-#boton{
-	background: #31384A;
-	color: #fff;
-	padding: 20px;
+
+input [type="submit"]{
+	margin-bottom: 0;
+	background: #1668C4;
+	color:BLUE;
+	color: none;
 }
+/*input[typpe="submit":hover]{
+	background: #4A88F4;
+}*/
