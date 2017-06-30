@@ -15,6 +15,7 @@
          		echo "<tr>";
          		echo "<td> $fila[nombre] </td> <td>$fila[correo] </td><br>" ;
          		echo "</tr>";
+         		
          	} 
          }
  }

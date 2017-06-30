@@ -1,6 +1,8 @@
 <?php
 include 'conexion.php';
 
+
+if($_SERVER["REQUEST_METHOD"]=="POST"){
   $nombrePro = $_POST["nombrePro"];
   $categoria=$_POST["categoria"];
   $fichaTecnica=$_POST["fichaTecnica"];
@@ -10,7 +12,15 @@ include 'conexion.php';
   $NombreAs=$_POST["NombreAs"];
   $ApellidoPaternoAS=$_POST["ApellidoPaternoAS"];
   $ApellidoMaternoAS=$_POST["ApellidoMaternoAS"];
-  
+  }
+
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 
 
 
