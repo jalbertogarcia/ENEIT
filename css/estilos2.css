@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+
+}
+body{
+	background-color: hsl(169, 50%, 50%);
+    background-size: cover;
+	display: flex;
+	min-height: 100vh;
+}
+form{
+	margin: auto;
+	width: 50%;
+	max-width: 500px;
+	background: #F3F3F3;
+	padding: 30px;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+div#general{
+	margin: auto;
+	margin-top: 20px;
+	width: 600px;
+	height: 1000px;
+
+}
+div#info_evaluador{
+	width: 270px;
+	height: 357px;
+	float: right;
+	background-color: #F5F5DC;
+	border:3px groove gray;
+	border-radius: 15px;
+}
+div#info{
+	width: 300px;
+	height: 50px;
+	background-color: #F5F5DC;
+	border:3px groove gray;
+	border-radius: 15px;
+
+}
+
+div#evaluadores{
+	width: 300px;
+	height: 300px;
+	background-color: #F5F5DC;
+	border:3px groove gray;
+	border-radius: 15px;
+}
+div#equipos{
+	width: 575px;
+	height: 425px;
+	background-color: #F5F5DC;
+	border:3px groove gray;
+	border-radius: 15px;
+}
+
+div#info_proyecto{
+	width: 575px;
+	height: 225px;
+	background-color: #F5F5DC;
+	border:3px groove gray;
+	border-radius: 15px;
+}
+
+h5{
+	margin-top: 5px;
+	font-size: 75%;
+}
+p{
+	color: #696969;
+    margin-top: 10px;
+    margin-left: 10px;	
+    font-size: 100%;
+    }
+td[id="eval"]{
+	height: 80px;
+}
+td[id="inf"]{
+	width: 100px;
+	height: 40px;
+}
+td[id="dato"]{
+	width: 165px;
+	height: 40px;
+}
+td[id="dato"]{
+	font-size: 
+}
+ table[id="eq2"]{
+ 	margin-top: 70px;
+
+ }
+ table[id="eq3"]{
+ 	margin-top: 70px;
+
+ }
+select[id="eval"]{
+	width: 180px;
+	height: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+select[id="equipo"]{
+	width: 100px;
+	height: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+input[type="submit"]{
+	display: inline-block;
+    background: #2394D5;
+    padding: 5px 15px;
+    color: #fff;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+td[id="num"]{
+	width: 80px;
+	height: 20px;
+}
+td[id="nom"]{
+	width: 240px;
+	height: 20px;
+}
+td[id="tit"]{
+	width: 120px;
+	height: 20px;
+}
+td[id="esp"]{
+	width: 110px;
+	height: 20px;
+}
+
+td[id="nomP"]{
+	width: 300px;
+	height: 20px;
+}
+td[id="cat"]{
+	width: 150px;
+	height: 20px;
+}
+td[id="eqEv"]{
+	width: 110px;
+	height: 20px;
+}
