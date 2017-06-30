@@ -24,26 +24,33 @@
             <!--Mi Diseño--> 
              <table>
      	        <tr>
-     	        <td><label>Nombre:</label></td>
-     	        <td><input type="text" id="nombre" name="nombre" required></td>
+     	        <label>Nombre:</label>
+     	        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
                 </tr>
 
      	        <tr>
-     	        <td><label>Correo:</label></td>
-     	        <td><input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required></td>
+     	        <label>Correo:</label>
+     	         <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required>  
      	        </tr>
 
      	        <tr>
-     	        	<td><label>Telefono:</label></td>
-     	        	<td><input type="text" name="numTelefonico" id="telefono" required></td>
+     	         <label>Telefono:</label>
+     	         <input type="text" id="telefono"  placeholder="Escribe tu numero telefonico" required>
      	        </tr>
 
      	        <tr>
-     	        	<td><label>Especialidad:</label></td>
-     	        	
-     	        	<td>
+     	        	<label>Especialidad:</label>
                     <select name="especialidad">
-                        <option value="Seleccione su Especialidad">Seleccione su Especialidad</option>
+                        <option value="Seleccion">--Selecciona--</option>
+                        <option value="Ing En Sistemas Computacionales">Ing E Sistemas Computacionales</option>
+                        <option value="Ing En Industrial">Ing En Industrial</option>
+                        <option value="Ing En Industrias Alimentarias">Ing En  Industrias Alimentarias</option>
+                        <option value="Ing En Electromecanica">Ing En Electromecanica</option>
+                        <option value="Ing En Gestion Empresarial">Ing En Gestion Empresarial</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                        <option value="Ing En Tecnologias de la Informacion y Comunicaciones">Ing En Tecnologias de la Informacion y Comunicaciones</option>
+                        <option value="Ing En Logística">Ing En Logística </option>
+
      	        		<option value="Administracion de Redes">Administracion de Redes</option>
                         <option value="Administracion en Coputacion">Administracion en Coputacion</option>
                         <option value="Arquitectura en Proyectos">Arquitectura en Proyectos</option>
@@ -56,27 +63,23 @@
      	        		<option value="Ingenieria en Sistemas y Comoutacion">Ingenieria en Sistemas y Comoutacion</option>
      	        		<option value="Otros">Otros</option>
      	        	</select>
-                    </td>	
      	        </tr>
                  
      	        <tr>
-     	        	<td><label>Titulo:</label></td>
-     	        	<td>
+     	        	<label>Titulo:</label>
      	        	<select name="titulo">
-                        <option value="Selecciona tu Titulo">Selecciona tu Titulo</option>
+                        <option value="Seleccion">--Selecciona--</option>
      	        		<option value="ing">Ingeniero</option>
      	        		<option value="lic">Licenciado</option>
      	        		<option value="tec">Tecnico</option>
                         <option value="doc">Doctor</option>
      	        	</select>
-     	        	</td>
      	        </tr>
 
      	        <tr>
-     	        	<td><label>Institucion:</label></td>
-     	        	<td>
-     	        		<select name="  institucion">
-                            <option value="Selecciona tu Institucion">Selecciona tu Institucion</option>
+     	        	<label>Institucion:</label>
+     	        		<select name="institucion">
+                            <option value="Seleccion">--Selecciona--</option>
                             <option value="itsoeh">Instituto Tecnológico Superior de Occidente del Estado de Hidalgo</option>
      	        			<option value="uth">Universidad Tecnológica de la Huasteca Hidalguense</option>
      	        			<option value="ut">Universidad Tecnológica de la Sierra Hidalguense</option>
@@ -84,22 +87,16 @@
      	        			<option value="ute">Universidad Tecnológica de Tulancingo</option>
      	        			<option value="uttvm">Universidad Tecnológica del Valle del Mezquital</option>
      	        		</select>
-     	        	</td>
-     	        </tr>
-               
-				<td>
-                <form action="" metodh="post" >
-                    <input type="submit" value="enviar" id="enviar" name="subir"> </td>
-                </form>
-		         </tr>
+     	        </tr> 
              </table>
         <!--terminacion de mi diseño-->
+         <!--checar-->
+        <tr>
+                    <td colspan="2"><center><input type="submit" name="enviar" value="Registrar" required></center></td>
+                </tr>
     </header>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    
-   
-
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -114,9 +111,7 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
-
-
+    <script src="js/freelancer.min.js"></script>           
 </form>
 </body>
 </html>
