@@ -12,6 +12,7 @@
 
 <!--Checar-->
 <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/estiloRegPro.css">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Theme CSS -->
@@ -50,87 +51,83 @@
                 
 
      	        <tr>
-     	        <td><label>Nombre del proyecto</label></td>
-     	        <td><input id="nombrePro" name="nombrePro" type="text"></td>
+     	        <label>Nombre del proyecto</label>
+                <input id="nombrePro" name="nombrePro" type="text" placeholder="Escribe nombre de proyecto" required>
                 </tr>
 
         
 
-                <tr>
-                <td><label>Categoria</label></td>
-                <td><input id="categoria" name="categoria" type="text"></td>
+                 <tr>
+                    <label>Categoria:</label>
+                    
+                    
+                    <select name="categoria" >
+                        <option value="Selecciona">--Selecciona una categoria--</option>
+                        <option value="Innovación Social">Innovación Social</option>
+                        <option value="Aplicaciones Móviles">Aplicaciones Móviles</option>
+                        <option value="Producto o Servicio">Producto o Servicio</option>
+                    </select>  
                 </tr>
 
 
 
                 <tr>
-                <td><label>Ficha Tecnica:</label></td>
-                <td><input id="fichaTecnica" name="fichaTecnica" type="text"></td>
+                <form method="post" action="" enctype="multipart/form-data">
+                <label>Ficha Tecnica:</label>
+                <input type="file" name="fichaTecnica" required>
+                </form>
                 </tr>
 
      	        
 
 
-             </table>
-             
-             
 
-            <table>
-
-                <td><label  aling="center">Integrantes</label></td>
+                <label  aling="center">Integrantes</label>
                 
                 <tr>
-                <td><label>Nombre integrante</label></td>
-                <td><input id="nombreInt" name="nombreInt" type="text"></td>
+                <label>Nombre integrante</label>
+                <input id="nombreInt" name="nombreInt" type="text" placeholder="Escribe tu nombre" required>
                 </tr>
 
 
 
                 <tr>
-                <td><label>Apellido Paterno</label></td>
-                <td><input id="ApellidoPaIn"  name="ApellidoPaternoInt"
-                type="text"></td>
+                <label>Apellido Paterno</label>
+                <input id="ApellidoPaIn"  name="ApellidoPaternoInt" type="text" placeholder="Escribe tu apellido paterno" required>
                 </tr>
 
 
 
                 <tr>
-                <td><label>Apellido materno</label></td>
-                <td><input id="ApellidoMaIn" name="ApellidoMaternoInt" type="text"></td>
+                <label>Apellido materno</label>
+                <input id="ApellidoMaIn" name="ApellidoMaternoInt" type="text" placeholder="Escribe tu apellido materno" required>
                 </tr>
 
                 
 
 
-             </table> 
-
-
-             <table>
-
-                <td><label >Asesor</label></td>
+                <label >Asesor</label>
                 
                 <tr>
-                <td><label>Nombre asesor</label></td>
-                <td><input id="NombreAse" name="NombreAs" type="text"></td>
+                <label>Nombre asesor</label>
+                <input id="NombreAse" name="NombreAs" type="text" placeholder="Escribe tu nombre" required>
                 </tr>
 
 
 
                 <tr>
-                <td><label>Apellido Paterno</label></td>
-                <td><input id="ApellidoPaAse" name="ApellidoPaternoAS" type="text"></td>
+                <label>Apellido Paterno</label>
+                <input id="ApellidoPaAse" name="ApellidoPaternoAS" type="text" placeholder="Escribe tu apellido paterno" required>
                 </tr>
 
 
 
                 <tr>
-                <td><label>Apellido materno</label></td>
-                <td><input id="ApellidoMaASe" name="ApellidoMaternoAS"type="text"></td>
+                <label>Apellido materno</label>
+                <input id="ApellidoMaASe" name="ApellidoMaternoAS"type="text" placeholder="Escribe tu apellido materno" required>
                 </tr>
 
-                
-
-
+                                
              </table>
              
 
@@ -138,14 +135,9 @@
  
                 
 
-     
-        <form action="" metodh="post" >
-                    <input type="submit" value="enviar" id="enviar" name="subir" > </td>
-        </form>
-
-
-
-
+            <tr>
+            <td colspan="2"><center><input type="submit" value="Registrar" id="enviar" name="subir" > </center> </td>
+            </tr>
         
         <!--terminacion de mi diseño-->
 
