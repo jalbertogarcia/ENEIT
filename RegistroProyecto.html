@@ -22,10 +22,11 @@
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body>
-    <form action="categoria.php" method="post" onsubmit="return valida();"><!--!estam adre manda ha hacer el registro-->
+    <form action="categoria.php" method="post" onsubmit="return valida();" enctype="multipart/form-data"><!--!estam adre manda ha hacer el registro-->
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom"><!--color y diseño del menu-->
 	<div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,9 +73,9 @@
 
 
                 <tr>
-                <form method="post" action="" enctype="multipart/form-data">
+                
                 <label>Ficha Tecnica:</label>
-                <input type="file" name="fichaTecnica" required>
+                <input id="fichaTecnica" type="file" name="fichaTecnica" requiered > 
                 </form>
                 </tr>
 
@@ -102,6 +103,9 @@
                 <label>Apellido materno</label>
                 <input id="ApellidoMaIn" name="ApellidoMaternoInt" type="text" placeholder="Escribe tu apellido materno" required>
                 </tr>
+
+
+
 
                 
 
@@ -136,7 +140,7 @@
                 
 
             <tr>
-            <td colspan="2"><center><input type="submit" value="Registrar" id="enviar" name="subir" > </center> </td>
+            <td colspan="2"><center><input type="submit" value="enviar" id="enviar" name="subir" > </center> </td>
             </tr>
         
         <!--terminacion de mi diseño-->
@@ -154,5 +158,10 @@
     
 
 </form>
+
+
+
+
+
 </body>
 </html>
