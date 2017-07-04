@@ -1,8 +1,5 @@
 <?php
 include 'conexion.php';
-include 'config.inc.php';
-
-if (isset($_POST['subir'])){
 
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -25,21 +22,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 }
 
 
-  $nombre = $_FILES['fichaTecnica']['name'];
-    $tipo = $_FILES['fichaTecnica']['type'];
-    $tamanio = $_FILES['fichaTecnica']['size'];
-    $ruta = $_FILES['fichaTecnica']['tmp_name'];
-    $destino = "Archivos/" . $nombre;
-   
-    if ($nombre != "") {
-        if (copy($ruta, $destino))
-            $db=new Conect_MySql();
-            $sql = "INSERT INTO tbl_documentos(tamanio,tipo,nombre_archivo) VALUES('$tamanio','$tipo','$nombre')";
-            $query = $db->execute($sql);
 
 
 
-  $insertar =  "INSERT INTO  proyecto (nombrePro,categoria) VALUES ('$nombrePro', '$categoria')"; 
+  $insertar =  "INSERT INTO  proyecto (nombrePro,categoria,fichaTecnica) VALUES ('$nombrePro', '$categoria', '$fichaTecnica')"; 
    $resu = mysqli_query($conexion, $insertar);
   
  
@@ -66,6 +52,3 @@ if(!$resultado&!$resultadoses&!$resu){
   echo 'Registro correctoo';
 }
  
-}
-}
-?>
