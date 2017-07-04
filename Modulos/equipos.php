@@ -1,3 +1,6 @@
+<?php 
+require("../conexion.php");
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +12,7 @@
 <div id="general">
 	 <div id="info_evaluador">
 	 	<p><b>Información del evaluador</b></p> <br>
-	 	<table border="0" id="inf_eval">
+	 	<table border="1" id="inf_eval">
 	 		<tr> <td id="inf">Nombre:</td>
 	 		     <td id="dato"></td></tr>
 	 		<tr> <td id="inf">Especialidad:</td>
@@ -35,15 +38,33 @@
      <table border="0">
      	<tr>
      		<td id="eval">Evaluador:</td>
-     		<td id="eval"> <select name="evaluador" id="eval">
-                 <option value="evaluador" selected>Alberto</option>
-                 </select>
+     		<td id="eval">
+     	    <select name="evaluador" id="eval">
+     	    <option value="selEv">Seleccione...</option>
+     		 <?php
+   $sql = "SELECT * FROM usuario WHERE tipo='Evaluador'";
+   $result = $mysqli->query($sql);
 
+if ($result->num_rows > 0) {
+    // output data of each row
+	while($row = $result->fetch_assoc()) {
+		echo "<option value= ".$row["id_Usuario"].">" .$row['nombre']." ".$row['ApellidoP']." ".$row['ApellidoM']."</option>";
+	}
+}
+else {
+    echo "0 results";
+}
+
+?>   
+                 </select>
      		</td>
      	</tr>
      	<tr> <td id="eval">Equipo:</td>
      	     <td id="eval"> <select name="equipo" id="equipo">
-             <option value="Equipo" selected>No. 1</option>
+             <option value="Seleccion" >Seleccione...</option>
+             <option value="Equipo1" >No. 1</option>
+             <option value="Equipo2" >No. 2</option>
+             <option value="Equipo3" >No. 3</option>
                  </select>
                  </td>
      	</tr>
