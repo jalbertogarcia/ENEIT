@@ -3,9 +3,9 @@ session_start();
 
   if (isset($_SESSION['usuario'])) {
   	if ($_SESSION['usuario']['tipo']=="Coordinador") {
-  		header('Location: Index.html');
+  		header('location: Coordinador.php');
   	}else if($_SESSION['usuario']['tipo']=="Evaluador"){
-        header('Location: Evaluador.html');
+        header('location: evaluador.php');
   	}
   	
   }
