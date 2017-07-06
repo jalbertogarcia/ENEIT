@@ -7,41 +7,54 @@ require("../conexion.php");
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../css/estilos2.css">
 	<title></title>
+	<script>
+	function showList() {
+		ev=document.frmEvaluadores.evaluador.value; 
+		eq=document.frmEvaluadores.equipo.value;  
+		
+    if (ev.length == 0 || eq.length == 0) { 
+        document.getElementById("Lista").innerHTML = "";
+		
+        return;
+    } else { 
+		if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+			
+           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("equipos").innerHTML = xmlhttp.responseText;
+				
+            }
+        };
+		
+        xmlhttp.open("GET", "procesarEquipo.php?p="+ ev+"&i="+eq, true);
+		 xmlhttp.send();
+		//document.getElementById("Lista").innerHTML = xmlhttp.responseText;
+       
+    }
+}
+</script>
 </head>
 <body>
 <div id="general">
-	 <div id="info_evaluador">
-	 	<p><b>Información del evaluador</b></p> <br>
-	 	<table border="1" id="inf_eval">
-	 		<tr> <td id="inf">Nombre:</td>
-	 		     <td id="dato"></td></tr>
-	 		<tr> <td id="inf">Especialidad:</td>
-	 		     <td id="dato"></td></tr>
-	 		<tr> <td id="inf">Título:</td>
-	 		     <td id="dato"></td></tr>
-	 		<tr> <td id="inf">Institución:</td>
-	 		     <td id="dato"></td></tr>
-	 		<tr> <td id="inf">Correo:</td>
-	 		     <td id="dato"></td></tr>
-	 		<tr> <td id="inf">Número de teléfono:</td>
-	 		     <td id="dato"></td></tr>
-	 	</table>
-	 </div>
-
 	 <div id="info">
 	 	<h5 align="center">Elija al evaluador registrado y el equipo al que desea agregarlo.</h5>
 	 </div>
 
-	 <div id="evaluadores">
+	 <form id="frmEvaluadores" name="frmEvaluadores" method="post">
 
 	 <p><b>Evaluadores</b></p>
-     <table border="0">
+     <table border="1">
      	<tr>
      		<td id="eval">Evaluador:</td>
      		<td id="eval">
-     	    <select name="evaluador" id="eval">
-     	    <option value="selEv">Seleccione...</option>
-     		 <?php
+     	    <select name="evaluador" id="evaluador">
+         	 <?php
    $sql = "SELECT * FROM usuario WHERE tipo='Evaluador'";
    $result = $mysqli->query($sql);
 
@@ -52,16 +65,14 @@ if ($result->num_rows > 0) {
 	}
 }
 else {
-    echo "0 results";
+    echo "Ocurrió algún error :(";
 }
-
 ?>   
                  </select>
      		</td>
      	</tr>
      	<tr> <td id="eval">Equipo:</td>
      	     <td id="eval"> <select name="equipo" id="equipo">
-             <option value="Seleccion" >Seleccione...</option>
              <option value="Equipo1" >No. 1</option>
              <option value="Equipo2" >No. 2</option>
              <option value="Equipo3" >No. 3</option>
@@ -69,10 +80,10 @@ else {
                  </td>
      	</tr>
      	<tr> <td id="eval"> </td>
-     	     <td id="eval"><input type="submit" value="Registrar" id="registrar"></td>
+     	     <td id="eval"><a href="javascript:showList()"> Registrar<a>  </td>
      	</tr>
       </table>
-	 </div>
+	 </form>
 
 <div id="equipos">
 	 	<p><b>Equipos</b></p> <br>

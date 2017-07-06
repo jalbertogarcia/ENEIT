@@ -27,9 +27,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 	border-radius: 3px;
 
 }
-h2{
-    color: red;
-}
 
 input[type="submit"], input[type="button"], input[type="reset"] {
     display: inline-block;

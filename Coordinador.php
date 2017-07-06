@@ -77,6 +77,9 @@ session_start();
                     <li class="page-scroll">
                         <a href="Modulos/equipos.php" target="contenido">Formar Equipos</a>
                     </li>                 
+                    <li class="page-scroll">
+                        <a href="Modulos/estadisticas.php" target="contenido">Resultados</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
