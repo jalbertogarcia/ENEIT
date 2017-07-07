@@ -71,7 +71,7 @@ session_start();
 >>>>>>> efdec34ce41287e8d1f4badc102923271fe696ba
                     </li>
                     <li class="page-scroll">
-                        <a href="verProyecto.php" target="/contenido">Ver Proyectos</a>
+                        <a href="verProyecto.php" target="contenido">Ver Proyectos</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#" target="/contenido">Botón</a>
