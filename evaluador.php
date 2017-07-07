@@ -64,7 +64,7 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="AplicacioesMovilesRubrica.php" target="/contenido">Rubrica de Evaluacion</a>
+                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica de Evaluacion</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#" target="/contenido">Botón</a>
