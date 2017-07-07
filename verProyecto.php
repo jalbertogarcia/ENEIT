@@ -33,12 +33,7 @@
                   $Con = new conexion();
                   $Con->recuperarDatos();
                  ?>
-              <table border="1" width="100%">
-              <thead>
-                  <td><b>Descarga documento</b></td>  
-              </thead>  
-              </table>
-              <a href="" download="archivo">Descargar Archivo</a>
+               
               
          <!--terminacion de mi diseño-->
      </header>
