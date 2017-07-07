@@ -74,7 +74,7 @@ session_start();
 
                     </li>
                     <li class="page-scroll">
-                        <a href="verProyecto.php" target="/contenido">Ver Proyectos</a>
+                        <a href="verProyecto.php" target="contenido">Ver Proyectos</a>
                     </li>
                     <li class="page-scroll">
                         <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica Evaluacion</a>
