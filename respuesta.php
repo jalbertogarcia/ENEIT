@@ -4,14 +4,15 @@
 
         if (isset($_POST['submit'])) {
 
-           $respuestaRadio=$_POST['status'];
+           $respuestas=$_POST['respuestaRadio'];
 
 
-           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestaRadio)"; 
+           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestas)"; 
            $resu = mysqli_query($conexion, $insertar);
            
            if(!$resu){
             echo 'Error al registrar';
             }else{
             echo 'Registro correctoo';}
+          }
 ?>
