@@ -14,7 +14,7 @@
             echo "<option value='seleciona'>--Seleciona Proyecto--</option>";
          	while ($fila = mysql_fetch_array($resultado)) {
          		
-               echo "<option value='proyecto'>$fila[nombrePro]</option>";
+               echo "<option value='proyecto' name='id_Proyecto'>$fila[id_Proyecto] $fila[nombrePro]</option>";
          		
          	}
             echo "</select>"; 
