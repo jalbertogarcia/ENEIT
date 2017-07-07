@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+  if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario']['tipo'] != "Evaluador") {
+        header('Location: Coordinador.php');
+    }else{
+        header('Location: ');
+    } 
+  }else{
+    header('Location: index.php');
+  }
+ ?>
 <DOCTYPE html>
 <html lang="es">
 
@@ -36,7 +49,7 @@
 
         <div class="container">
          <p><center>
-         <form >
+     
          <img src="img/SEP.jpg" width="400px" height="200px">
          
                 <h2>EVENTO NACIONAL ESTUDIANTIL DE INNOVACION TECNOLOGICA 2017</h2>
@@ -47,14 +60,15 @@
                 <h2> INSTITUTO TECNOLÓGICO SUPERIOR DEL OCCIDENTE DEL ESTADO DE HIDALGO</h2>
              <p><center>  
      
-         <form action="enviarRubricaAp.php" method="POST">
+         <form name="frmHoja1" action="enviarRubricaAp.php" method="POST">
          <table class="tablaRubrica">
               <tr>
-              <td> <p name="nombreEvaluador" required>Nombre del Evaluador: </td>
+              <td>Nombre de usuario : <?php echo $_SESSION['usuario']['nombre'] ?> </td>
               </tr>
               <tr>
-              <td>Nombre del proyecto        
+              <td >Nombre del proyecto    <input type="hidden" id="id_proyecto" name="id_proyecto">    
               <?php
+
                  include ("conexionProy.php");
                  $Con = new conexion();
                  $Con->recuperarDatos();
@@ -104,7 +118,7 @@
                 <td>Evaluación presencial</td>
                 <td></td>
                 <td>60</td>
-                <td><p id="evPre"></td>
+                <td><p id="evPre"></p></td>
                 </tr>
                   <td>Descripcion de la innovación</td>
                 <td>0</td>
@@ -140,7 +154,7 @@
                    <td>Prueba de concepto del prototipo</td>
                 <td></td>
                 <td>20</td>
-                <td><p id="PrueCo"></td>
+                <td><p id="PrueCo"></p></td>
                 </tr>
                   <td>Prueba de concepto de la aplicación</td>
                 <td>0</td>
@@ -160,19 +174,20 @@
                  <td>CALIFICACIÓN TOTAL</td>
                 <td></td>
                 <td>100</td>
-                <td><p id="totalF" name="calificacion" required></td>
+                <td><p id="calificacionP" name="calificacionP"></p><input type="hidden" id="calificacion" name="calificacion"></td>
                 
              </table></center></p>
             
-          </form>
+         
            <table>
               </tr>
                 <tr>
                   
-                  <td><input type="submit" name="name" value="Calificar" onclick="sumar();"></td>
+                  <td><input type="button" name="name" value="Calificar" onclick="sumar();"></td>
                    <td><input type="submit" name="" value="Enviar Calificaion"></td>
                 </tr>
                 </table>
+                 </form>
         <!--terminacion de mi diseño-->
 
             <div class="row">
@@ -202,7 +217,8 @@
    document.getElementById("evLinea").innerHTML=resul1;
    document.getElementById("evPre").innerHTML=resul2;
    document.getElementById("PrueCo").innerHTML=resul3;
-   document.getElementById("totalF").innerHTML=result;
+   document.frmHoja1.calificacion.value=result;
+   document.getElementById("calificacionP").innerHTML=result;
       }
     </script>
     <!-- Portfolio Grid Section -->
@@ -224,6 +240,7 @@
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
     <script src="js/validaCantidad.js"></script>
+
     
 </body>
 </html>

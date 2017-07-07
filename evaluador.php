@@ -70,7 +70,7 @@ session_start();
 
                         <a href="#page-top" target="contenido"></a>
 
-                        <a href="AplicacioesMovilesRubrica.php" target="/contenido">Rubrica de Evaluacion</a>
+                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica de Evaluacion</a>
 
                     </li>
                     <li class="page-scroll">
@@ -80,7 +80,7 @@ session_start();
                         <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica Evaluacion</a>
                     </li>
                      <li class="page-scroll">
-                        <a href="RespuestaEvaluador.html" target="/contenido">Respuesta Evaluador</a>
+                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Evaluador</a>
                     </li>
                     <li class="page-scroll">
                         <a href="Contrasena.php" target="contenido">Cambiar contraseña</a>
