@@ -20,9 +20,15 @@ $documentacion = $_FILES['rubricass']['name'];
 }
 
 
-$query = 'SELECT * FROM  equipoeva';
-$resultadoru = mysql_query($conexion,$query);
+$rubri = $_POST["equipo"];
+$rubriDo = $_POST["rubrica"];
 
-
+$insertar =  "INSERT INTO  equido (equipo, rubrica) VALUES ('$rubri', 'rubriDo')"; 
+   $resu = mysqli_query($conexion, $insertar);
+if(!$resu){
+  echo 'Error al registrar';
+}else{
+  echo 'Registro correctoo';
+}
 
 ?>

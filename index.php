@@ -26,8 +26,8 @@ session_start();
 <div class="main">
 <form action="" id="formlg">
 	<h2>Iniciar sesion</h2>
-	<input type="text" placeholder="&#128273; Usuario" name="usuariolg" required pattern="[A-Za-z0-9_\-@\.]{1,15}"/>
-	<input type="password" placeholder="&#128272; Contraseña" name="passlg" required pattern="[A-Za-z0-9_\-@\.]{1,15}"/>
+	<input type="text" placeholder="&#128273; Correo" name="usuariolg" required pattern="[A-Za-z0-9_\-@\.]{1,50}"/>
+	<input type="password" placeholder="&#128272; Contraseña" name="passlg" required pattern="[A-Za-z0-9_\-@\.]{1,50}"/>
 	<input type="submit" class="botonlg" value="Iniciar Sesión" />
 </form>
  </div>

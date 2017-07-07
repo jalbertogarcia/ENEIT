@@ -79,8 +79,11 @@ session_start();
                     </li> 
 
                     <li class="page-scroll">
-                        <a href="rubricas.html" target="contenido">Formar Equipos</a>
+                        <a href="rubricaS.php" target="contenido">Asiganar Rubrica</a>
                     </li>                 
+                    <li class="page-scroll">
+                        <a href="Modulos/resultados.php" target="contenido">Resultados</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

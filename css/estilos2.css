@@ -35,16 +35,15 @@ div#info_evaluador{
 	border-radius: 15px;
 }
 div#info{
-	width: 300px;
+	width: 575px;
 	height: 50px;
 	background-color: #F5F5DC;
 	border:3px groove gray;
-	border-radius: 15px;
-
+    border-radius: 15px;
 }
 
-div#evaluadores{
-	width: 300px;
+form{
+	width: 600px;
 	height: 300px;
 	background-color: #F5F5DC;
 	border:3px groove gray;
