@@ -1,0 +1,10 @@
+.tablaRubrica{
+	border: 1px solid;
+	width: 800px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+.tablaRubrica td{
+	border: 1px solid;
+	text-align: center;
+}
