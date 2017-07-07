@@ -67,7 +67,7 @@ if(!$resultado&!$resultadoses&!$resu){
   return $data;
 }
 
-}
+
 
 
 
