@@ -22,12 +22,14 @@ $nombre = $_FILES['fichaTecnica']['name'];
     $tamanio = $_FILES['fichaTecnica']['size'];
     $ruta = $_FILES['fichaTecnica']['tmp_name'];
     $destino = "Archivos/" . $nombre;
+    
    
     if ($nombre != "") {
         if (copy($ruta, $destino))
             $db=new Conect_MySql();
             $sql = "INSERT INTO tbl_documentos(tamanio,tipo,nombre_archivo) VALUES('$tamanio','$tipo','$nombre')";
             $query = $db->execute($sql);
+      }
 
 
 $insertar =  "INSERT INTO  proyecto (nombrePro,categoria) VALUES ('$nombrePro', '$categoria')"; 
@@ -65,7 +67,7 @@ if(!$resultado&!$resultadoses&!$resu){
   return $data;
 }
 
-}
+
 
 
 
