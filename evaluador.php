@@ -76,7 +76,7 @@ session_start();
                         <a href="#" target="/contenido">Botón</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="Contrasena.php" target="contenido">Contraseña</a>
                     </li>                 
                 </ul>
             </div>
