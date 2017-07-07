@@ -33,6 +33,7 @@
         <!-- /.container-fluid -->
     </nav>
     <header>
+
         <div class="container">
          <p><center>
          <form >
@@ -44,11 +45,12 @@
                 <h2> FORMATO DE EVALUACION   CATEGORIA: APLICACIONES MOVILES</h2>
                 <BR>
                 <h2> INSTITUTO TECNOLÓGICO SUPERIOR DEL OCCIDENTE DEL ESTADO DE HIDALGO</h2>
-             <p><center>
-         <form  >
+             <p><center>  
+     
+         <form action="enviarRubricaAp.php" method="POST">
          <table class="tablaRubrica">
               <tr>
-              <td>Nombre del Evaluador: </td>
+              <td> <p name="nombreEvaluador" required>Nombre del Evaluador: </td>
               </tr>
               <tr>
               <td>Nombre del proyecto        
@@ -62,7 +64,7 @@
       </table></center></p>
                 
                <p><center>
-              <table class="tablaRubrica">
+              <table class="tablaRubrica" name="id_Hoja">
                 <tr>
                 <td width="10">PARAMETROS DE EVALUACION</td>
                 <td colspan="2">PUNTUACION PROPUESTA<br>MINIMA &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MAXIMA</td>
@@ -158,15 +160,17 @@
                  <td>CALIFICACIÓN TOTAL</td>
                 <td></td>
                 <td>100</td>
-                <td><p id="totalF"></td>
+                <td><p id="totalF" name="calificacion" required></td>
+                
              </table></center></p>
             
           </form>
            <table>
               </tr>
                 <tr>
+                  
                   <td><input type="submit" name="name" value="Calificar" onclick="sumar();"></td>
-                   <td><input type="submit" name="Calificar" value="Enviar Calificaion"></td>
+                   <td><input type="submit" name="" value="Enviar Calificaion"></td>
                 </tr>
                 </table>
         <!--terminacion de mi diseño-->
