@@ -24,8 +24,8 @@
             <!--Mi Diseño--> 
              <table>
                 <tr>
-                <label>Contraseña antigua:</label>
-                <input type="password" name="password1" id="password1" placeholder="Escribe tu contraseña actual" required>
+                <label>Correo</label>
+                <input type="text" name="correo" id="correo" placeholder="Escribe tu correo" required>
                 </tr>
 
                 <tr>
