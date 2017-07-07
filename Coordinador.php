@@ -79,7 +79,7 @@ session_start();
                     </li> 
 
                     <li class="page-scroll">
-                        <a href="rubricaS.php" target="contenido">Asiganar Rubrica</a>
+                        <a href="rubricaS.php" target="contenido">Rubricas</a>
                     </li>                 
                     <li class="page-scroll">
                         <a href="Modulos/resultados.php" target="contenido">Resultados</a>

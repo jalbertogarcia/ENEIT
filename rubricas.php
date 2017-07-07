@@ -63,6 +63,11 @@ require("conexion.php");
 		<td>Cargar Rubricas</td>
 		<td id="cargar"> <input id="rubricass" name="rubricass"type="file" requiered></td>
 	</tr>
+
+
+    <tr>
+            <td colspan="2"><center><input type="submit" value="enviar" id="enviar" name="subir" > </center> </td>
+            </tr>
    </table>
 
 
@@ -118,7 +123,7 @@ else {
       </table>
 
       <tr>
-            <td colspan="2"><center><input type="submit" value="enviar" id="enviar" name="subir" > </center> </td>
+            <td colspan="2"><center><input type="submit" value="Guardar" id="Guardar" name="Guardar" > </center> </td>
             </tr>
 	 </form>
 

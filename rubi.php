@@ -16,19 +16,27 @@ $documentacion = $_FILES['rubricass']['name'];
             $conexion =new Conect_MySql();
             $nuevo = "INSERT INTO documentacion (Documentacion,tamano,tiposs) VALUES ('$documentacion','$tamano','$tipo')";
             $query = $conexion->execute($nuevo);
-}
-}
 
-
-$rubri = $_POST["equipo"];
-$rubriDo = $_POST["rubrica"];
-
-$insertar =  "INSERT INTO  equido (equipo, rubrica) VALUES ('$rubri', 'rubriDo')"; 
-   $resu = mysqli_query($conexion, $insertar);
-if(!$resu){
+            if(!$query){
   echo 'Error al registrar';
 }else{
   echo 'Registro correctoo';
 }
+}
+}
 
+if (isset($_POST['Guardar'])){
+
+$equipo = $_POST["equipo"];
+$rubrica = $_POST["rubrica"];
+
+  $insertar =  "INSERT INTO  equido (equipo, rubrica) VALUES ('$equipo', '$rubrica')"; 
+   $resu = mysqli_query($conexion, $insertar);
+
+if(!$insertar){
+  echo 'Error al registrar';
+}else{
+  echo 'Registro correctoo';
+}
+}
 ?>
