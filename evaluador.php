@@ -64,19 +64,26 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#" target="/contenido">Botón</a>
+
+                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica de Evaluacion</a>
+
+
+                        <a href="#page-top" target="contenido"></a>
+
+                        <a href="AplicacioesMovilesRubrica.php" target="/contenido">Rubrica de Evaluacion</a>
+
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="verProyecto.php" target="contenido">Ver Proyectos</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica Evaluacion</a>
                     </li>
                      <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="RespuestaEvaluador.html" target="/contenido">Respuesta Evaluador</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="Contrasena.php" target="contenido">Cambiar contraseña</a>
                     </li>                 
                 </ul>
             </div>
@@ -90,7 +97,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                     <iframe src="" name="contenido" id="contenido" width="600" height="600" style="border:0px;"> </iframe>
+                     <iframe src="" name="contenido" id="contenido" width="1000" height="600" style="border:0px;"> </iframe>
 
                 </div>
             </div>

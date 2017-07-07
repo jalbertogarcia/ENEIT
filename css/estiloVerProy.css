@@ -1,14 +1,14 @@
 body{
-	background-image: url('../img/profiles.png');
-	background-size:200vw 200vh;
+	background-image: url('../img/fondo.png');
+	background-size:100vw 100vh;
 	background-attachment: fixed;
-	margin: 0;
+	margin: 50;
 }
 
 form{
-	width: 540px;
+	width: 550px;
 	margin: auto;
-	background: rgba(0,0,0,0.4);
+	background: rgba(31,182,43,0.4);
 	padding: 10px 15px;
 	box-sizing: border-box;
 	margin-top: 15px;
@@ -18,11 +18,12 @@ h1{
 	color: #fff;
 	text-align: center;
 	margin: 0;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(4,118,244,0.7);
 	border-radius: 7px;
 	font-size:30;
 	margin-bottom: 20px;
 }
+
 input, textarea{
 	width: 100%;
 	margin-bottom: 20px;
@@ -36,21 +37,6 @@ label{
 	font-size: 20px;
 	display: block;
 	width: 100%;
-	color: white;
+	color: Red;
 
-}
-
-input [type="submit"]{
-	margin-bottom: 0;
-	background: #1668C4;
-	color:BLUE;
-	color: none;
-}
-
-
-input [type="radio"]{
-	margin-bottom: 0;
-	background-color: yellow;
-	color: white;
-	color: none;
 }

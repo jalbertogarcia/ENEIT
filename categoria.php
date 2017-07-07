@@ -1,6 +1,7 @@
 <?php
 include 'conexion.php';
 include 'config.inc.php';
+
 if (isset($_POST['subir'])){
 
 
@@ -20,13 +21,23 @@ $nombre = $_FILES['fichaTecnica']['name'];
     $tipo = $_FILES['fichaTecnica']['type'];
     $tamanio = $_FILES['fichaTecnica']['size'];
     $ruta = $_FILES['fichaTecnica']['tmp_name'];
-    $destino = "Archivos/" . $nombre;
+    
+
+   $formatos=array(".pdf");
+   $ext=substr($nombre, strrpos($nombre, '.'));
    
+   if(in_array($ext, $formatos)){
+    if(move_uploaded_file($nombre,"Archivos/$nombre"))
+      {echo "archivo subido"}
+    else{echo "Ocurrio Error"}
+      else{echo "Archivo no permitido"}
     if ($nombre != "") {
         if (copy($ruta, $destino))
             $db=new Conect_MySql();
             $sql = "INSERT INTO tbl_documentos(tamanio,tipo,nombre_archivo) VALUES('$tamanio','$tipo','$nombre')";
             $query = $db->execute($sql);
+      }
+    }
 
 
 $insertar =  "INSERT INTO  proyecto (nombrePro,categoria) VALUES ('$nombrePro', '$categoria')"; 
