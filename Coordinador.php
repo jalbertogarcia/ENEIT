@@ -76,6 +76,10 @@ session_start();
                     </li>
                     <li class="page-scroll">
                         <a href="Modulos/equipos.php" target="contenido">Formar Equipos</a>
+                    </li> 
+
+                    <li class="page-scroll">
+                        <a href="rubricas.html" target="contenido">Formar Equipos</a>
                     </li>                 
                 </ul>
             </div>
