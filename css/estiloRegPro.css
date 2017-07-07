@@ -1,6 +1,6 @@
 body{
-	background-image: url('../img/profile.png');
-	background-size:100vw 100vh;
+	background-image: url('../img/profiles.png');
+	background-size:200vw 200vh;
 	background-attachment: fixed;
 	margin: 0;
 }
@@ -48,7 +48,7 @@ input [type="submit"]{
 }
 
 
-input [type="file"]{
+input [type="radio"]{
 	margin-bottom: 0;
 	background-color: yellow;
 	color: white;
