@@ -10,38 +10,42 @@
 
 <!--Checar-->
 <!-- Custom Fonts -->
-    <link rel="stylesheet" href="css/estiloVerProy.css">
+    <link rel="stylesheet" href="css/estiloEv.css">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-     <form action="" method="post" onsubmit="return valida();">
-     <h1>Ver Proyectos</h1>
+     <form action="Contrasenna.php" method="post" onsubmit="return valida();">
+     <h1>Contraseña</h1>
     <!-- Header -->
     <header>
-         <!--Mi Diseño--> 
-             <center><h2>Documento</h2></center>
-             <table border="1" width="100%">
-             <thead>
-                 <td><b>Nombre del Proyecto</b></td>
-             </thead>
+            <!--Mi Diseño--> 
+             <table>
+                <tr>
+                <label>Correo</label>
+                <input type="text" name="correo" id="correo" placeholder="Escribe tu correo" required>
+                </tr>
+
+                <tr>
+                <label>Contraseña nueva:</label>
+                 <input type="password" name="passwordnuevo" id="passwordnuevo" placeholder="Escribe tu contraseña nueva" required>  
+                </tr>
+
+                <tr>
+                 <label>Confirmar contraseña:</label>
+                 <input type="password" name="passwordnuevo1" id="passwordnuevo1" placeholder="Confirmar contraseña nueva" required>
+                </tr>
+
+                </tr> 
              </table>
-             <?php
-                  include ("BDVerPro.php");
-                  $Con = new conexion();
-                  $Con->recuperarDatos();
-                 ?>
-              <table border="1" width="100%">
-              <thead>
-                  <td><b>Descarga documento</b></td>  
-              </thead>  
-              </table>
-              <a href="" download="archivo">Descargar Archivo</a>
-              
-         <!--terminacion de mi diseño-->
-     </header>
+        <!--terminacion de mi diseño-->
+         <!--checar-->
+        <tr>
+                    <td colspan="2"><center><input type="submit" name="enviar" id="enviar" value="Cambiar" required></center></td>
+                </tr>
+    </header>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <!-- jQuery -->
