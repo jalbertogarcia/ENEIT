@@ -1,6 +1,7 @@
 <?php
 include 'conexion.php';
 include 'config.inc.php';
+
 if (isset($_POST['subir'])){
 
 
