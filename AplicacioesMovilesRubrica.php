@@ -60,14 +60,15 @@ session_start();
                 <h2> INSTITUTO TECNOLÓGICO SUPERIOR DEL OCCIDENTE DEL ESTADO DE HIDALGO</h2>
              <p><center>  
      
-         <form action="enviarRubricaAp.php" method="POST">
+         <form name="frmHoja1" action="enviarRubricaAp.php" method="POST">
          <table class="tablaRubrica">
               <tr>
               <td>Nombre de usuario : <?php echo $_SESSION['usuario']['nombre'] ?> </td>
               </tr>
               <tr>
-              <td>Nombre del proyecto        
+              <td >Nombre del proyecto    <input type="hidden" id="id_proyecto" name="id_proyecto">    
               <?php
+
                  include ("conexionProy.php");
                  $Con = new conexion();
                  $Con->recuperarDatos();
@@ -117,7 +118,7 @@ session_start();
                 <td>Evaluación presencial</td>
                 <td></td>
                 <td>60</td>
-                <td><p id="evPre"></td>
+                <td><p id="evPre"></p></td>
                 </tr>
                   <td>Descripcion de la innovación</td>
                 <td>0</td>
@@ -153,7 +154,7 @@ session_start();
                    <td>Prueba de concepto del prototipo</td>
                 <td></td>
                 <td>20</td>
-                <td><p id="PrueCo"></td>
+                <td><p id="PrueCo"></p></td>
                 </tr>
                   <td>Prueba de concepto de la aplicación</td>
                 <td>0</td>
@@ -173,7 +174,7 @@ session_start();
                  <td>CALIFICACIÓN TOTAL</td>
                 <td></td>
                 <td>100</td>
-                <td><p id="calificacion" name="calificacion" required></td>
+                <td><p id="calificacionP" name="calificacionP"></p><input type="hidden" id="calificacion" name="calificacion"></td>
                 
              </table></center></p>
             
@@ -216,7 +217,8 @@ session_start();
    document.getElementById("evLinea").innerHTML=resul1;
    document.getElementById("evPre").innerHTML=resul2;
    document.getElementById("PrueCo").innerHTML=resul3;
-   document.getElementById("calificacion").innerHTML=result;
+   document.frmHoja1.calificacion.value=result;
+   document.getElementById("calificacionP").innerHTML=result;
       }
     </script>
     <!-- Portfolio Grid Section -->

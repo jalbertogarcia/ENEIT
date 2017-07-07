@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $conectar =@mysql_connect('localhost','root','');
 if (!$conectar) {
    echo "No se pudo conectar con el servidor";
@@ -9,11 +11,10 @@ if (!$conectar) {
    }
 }
             $calificacion=$_POST['calificacion'];
-            $id_Usuario=$_POST['id_Usuario'];
-            $id_Proyecto=$_POST['id_Proyecto'];
-            $id_Hoja=$_POST['id_Hoja'];
+            $id_usuario=$_SESSION['usuario']['id_usuario'];
+            $id_proyecto=$_POST['id_proyecto'];
 
-            $sql="INSERT INTO evaluacion VALUES('','$calificacion','$id_Usuario','id_Proyecto','id_Hoja')";
+            $sql="INSERT INTO evaluacion VALUES('','$calificacion','$id_usuario','id_proyecto','1')";
             $ejecutar=mysql_query($sql);
             if(!$ejecutar){
                echo "Hubo Algun Error";
