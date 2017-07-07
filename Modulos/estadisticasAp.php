@@ -19,10 +19,11 @@ $ap=$mysqli->query($resAp);
 <body>
 <header>
 	<div class="alert alert-info"></div>
-	<h2 class="w3-text-lime w3-hover-text-lime:hover" align="center"> <b>Registro general de proyectos</b></h2>
 </header>
 <section>
-	<table class="w3-table w3-striped w3-border">
+	 <h2 class="w3-text-lime w3-hover-text-lime:hover" align="center"><b>Registro de proyectos que obtuvieron 70% o más</b></h2>
+
+	 <table class="w3-table w3-striped w3-border">
 	<tr class="w3-green">
 		<th>Proyecto</th>
 		<th>Evaluador</th>
@@ -32,20 +33,19 @@ $ap=$mysqli->query($resAp);
 
 	</tr>
 	<?php 
-	while ($resTodo=$con->fetch_array(MYSQLI_BOTH)) {
+	while ($resApro=$ap->fetch_array(MYSQLI_BOTH)) {
     echo'<tr>
-    <td>'.$resTodo['nombrePro'].'</td>
-    <td>'.$resTodo['evaluador'].'</td>
-    <td>'.$resTodo['ApellidoP'].'</td>
-    <td>'.$resTodo['ApellidoM'].'</td>
-    <td>'.$resTodo['calificacion'].'</td>
+    <td>'.$resApro['nombrePro'].'</td>
+    <td>'.$resApro['evaluador'].'</td>
+    <td>'.$resApro['ApellidoP'].'</td>
+    <td>'.$resApro['ApellidoM'].'</td>
+    <td>'.$resApro['calificacion'].'</td>
     </tr>';
 	}
 	 ?>
 	 </table>
-	 <br>
-	 <br>
-	 <a  href="resultados.php"><img  src="../img/back.png" alt="Volver" width="80" height="30" style="margin-left:60px; margin-top:50px"></a>
+
+<a  href="resultados.php"><img  src="../img/back.png" alt="Volver" width="80" height="30" style="margin-left:60px; margin-top:50px"></a>
 </section>
 </body>
 </html>
