@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+  if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario']['tipo'] != "Evaluador") {
+        header('Location: Coordinador.php');
+    }else{
+        header('Location: ');
+    } 
+  }else{
+    header('Location: index.php');
+  }
+ ?>
 <DOCTYPE html>
 <html lang="es">
 
@@ -36,7 +49,7 @@
 
         <div class="container">
          <p><center>
-         <form >
+     
          <img src="img/SEP.jpg" width="400px" height="200px">
          
                 <h2>EVENTO NACIONAL ESTUDIANTIL DE INNOVACION TECNOLOGICA 2017</h2>
@@ -50,7 +63,7 @@
          <form action="enviarRubricaAp.php" method="POST">
          <table class="tablaRubrica">
               <tr>
-              <td> <p name="nombreEvaluador" required>Nombre del Evaluador: </td>
+              <td>Nombre de usuario : <?php echo $_SESSION['usuario']['nombre'] ?> </td>
               </tr>
               <tr>
               <td>Nombre del proyecto        
@@ -160,19 +173,20 @@
                  <td>CALIFICACIÓN TOTAL</td>
                 <td></td>
                 <td>100</td>
-                <td><p id="totalF" name="calificacion" required></td>
+                <td><p id="calificacion" name="calificacion" required></td>
                 
              </table></center></p>
             
-          </form>
+         
            <table>
               </tr>
                 <tr>
                   
-                  <td><input type="submit" name="name" value="Calificar" onclick="sumar();"></td>
+                  <td><input type="button" name="name" value="Calificar" onclick="sumar();"></td>
                    <td><input type="submit" name="" value="Enviar Calificaion"></td>
                 </tr>
                 </table>
+                 </form>
         <!--terminacion de mi diseño-->
 
             <div class="row">
@@ -202,7 +216,7 @@
    document.getElementById("evLinea").innerHTML=resul1;
    document.getElementById("evPre").innerHTML=resul2;
    document.getElementById("PrueCo").innerHTML=resul3;
-   document.getElementById("totalF").innerHTML=result;
+   document.getElementById("calificacion").innerHTML=result;
       }
     </script>
     <!-- Portfolio Grid Section -->
@@ -224,6 +238,7 @@
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
     <script src="js/validaCantidad.js"></script>
+
     
 </body>
 </html>
