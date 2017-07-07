@@ -4,10 +4,10 @@
 
         if (isset($_POST['submit'])) {
 
-           $respuestas=$_POST['respuestaRadio'];
+           $respuestaRadio=$_POST['status'];
 
 
-           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestas)"; 
+           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestaRadio)"; 
            $resu = mysqli_query($conexion, $insertar);
            
            if(!$resu){
