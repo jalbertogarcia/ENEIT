@@ -64,10 +64,10 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="#page-top" target="contenido"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="verProyecto.php" target="/contenido">Ver Proyectos</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#" target="/contenido">Botón</a>
