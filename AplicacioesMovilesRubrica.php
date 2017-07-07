@@ -170,11 +170,11 @@
                 <tr>
                   
                   <td><input type="submit" name="name" value="Calificar" onclick="sumar();"></td>
-                   
+                   <td><input type="submit" name="" value="Enviar Calificaion"></td>
                 </tr>
                 </table>
         <!--terminacion de mi diseño-->
-<td><input type="submit" name="" value="Enviar Calificaion"></td>
+
             <div class="row">
                 <div class="col-lg-12">
                      <iframe src="" name="contenido"  id="contenido" width="600" height="600" style="border:0px;"> </iframe>
