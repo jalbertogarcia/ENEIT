@@ -14,4 +14,5 @@
             echo 'Error al registrar';
             }else{
             echo 'Registro correctoo';}
+          }
 ?>

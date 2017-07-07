@@ -80,10 +80,10 @@ session_start();
                         <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica Evaluacion</a>
                     </li>
                      <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="RespuestaEvaluador.html" target="/contenido">Respuesta Evaluador</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#" target="/contenido">Botón</a>
+                        <a href="Contrasena.php" target="contenido">Cambiar contraseña</a>
                     </li>                 
                 </ul>
             </div>
