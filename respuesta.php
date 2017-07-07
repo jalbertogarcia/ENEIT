@@ -3,11 +3,12 @@
         include 'config.inc.php';
 
         if (isset($_POST['submit'])) {
+          if(isset($_POST['respuestaRadio']))
+          {
+           $respuestas=$_POST["respuestaRadio"];
 
-           $respuestaRadio=$_POST['status'];
 
-
-           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestaRadio)"; 
+           $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestas')"; 
            $resu = mysqli_query($conexion, $insertar);
            
            if(!$resu){
@@ -15,4 +16,5 @@
             }else{
             echo 'Registro correctoo';}
           }
+        }
 ?>
