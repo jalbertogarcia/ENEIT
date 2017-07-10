@@ -18,11 +18,11 @@
 
 <body>
      <form action="" method="post" onsubmit="return valida();">
-     <h1>Ver Proyectos</h1>
+     <h1>Mis Proyectos</h1>
     <!-- Header -->
     <header>
          <!--Mi Diseño--> 
-             <center><h2>Documento</h2></center>
+             
              <table border="1" width="100%">
              <thead>
                  <td><b>Nombre del Proyecto</b></td>
