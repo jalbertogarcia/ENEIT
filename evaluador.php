@@ -77,10 +77,7 @@ session_start();
                         <a href="verProyecto.php" target="contenido">Ver Proyectos</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica Evaluacion</a>
-                    </li>
-                     <li class="page-scroll">
-                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Evaluador</a>
+                        <a href="selecionar.php" target="contenido">Rubrica Evaluacion</a>
                     </li>
                     <li class="page-scroll">
                         <a href="Contrasena.php" target="contenido">Cambiar contraseña</a>

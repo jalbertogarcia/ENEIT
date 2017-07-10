@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'conexion.php';
 include 'config.inc.php';
 

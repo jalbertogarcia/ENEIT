@@ -15,12 +15,12 @@ if (!$conectar) {
          //   $id_proyecto = $_POST["id_proyecto"];
 
 
-            $sql="INSERT INTO evaluacion VALUES('','$calificacion','$id_usuario','2','1')";
+            $sql="INSERT INTO evaluacion VALUES('','$calificacion','$id_usuario','1','3')";
             $ejecutar=mysql_query($sql);
             if(!$ejecutar){
                echo "Hubo Algun Error";
             }else{
-               echo "Datos Guardados Correctamente<br><a href='AplicacioesMovilesRubrica.php'>Volver</a>";
+               echo "Datos Guardados Correctamente<br><a href='Producto.php'>Volver</a>";
             }
          
  

@@ -1,7 +1,12 @@
 <?php 
 require("../conexion.php");
 
-$resGen="SELECT DISTINCT evaluacion.id_Proyecto as idP, nombrePro,nombreInt,ApellidoPaternoInt,ApellidoMaternoInt FROM proyecto,evaluacion,integrantes,integrantesproyecto WHERE proyecto.id_Proyecto=evaluacion.id_Proyecto AND  integrantes.id_Integrante=integrantesproyecto.id_Integrante AND evaluacion.id_Proyecto=integrantesproyecto.id_Proyecto";
+$resGen="SELECT DISTINCT evaluacion.id_Proyecto as idP, 
+nombrePro,nombreInt,ApellidoPaternoInt,ApellidoMaternoInt FROM 
+proyecto,evaluacion,integrantes,integrantesproyecto WHERE 
+proyecto.id_Proyecto=evaluacion.id_Proyecto AND  
+integrantes.id_Integrante=integrantesproyecto.id_Integrante AND 
+evaluacion.id_Proyecto=integrantesproyecto.id_Proyecto";
 //$resAp="SELECT nombrePro,usuario.nombre as evaluador, ApellidoP, ApellidoM, calificacion FROM proyecto,evaluacion,usuario WHERE calificacion>=70 AND proyecto.id_Proyecto=evaluacion.id_Proyecto AND evaluacion.id_Usuario=usuario.id_Usuario";
 //"SELECT nombrePro,usuario.nombre as evaluador FROM proyecto,evaluacion,usuario WHERE proyecto.id_Proyecto=evaluacion.id_Proyecto AND evaluacion.id_Usuario=usuario.id_Usuario";
 //SELECT nombrePro,usuario.nombre,nombreInt,ApellidoPaternoInt,ApellidoMaternoInt FROM proyecto,evaluacion,usuario,integrantes,integrantesproyecto WHERE proyecto.id_Proyecto=evaluacion.id_Proyecto AND evaluacion.id_Usuario=usuario.id_Usuario AND integrantes.id_Integrante=integrantesproyecto.id_Integrante
@@ -33,19 +38,25 @@ $con=$mysqli->query($resGen);
 	</tr>
 	<?php 
 	while ($resTodo=$con->fetch_array(MYSQLI_BOTH)) {
-    echo'<tr>
+	$prom = "SELECT AVG(calificacion) as promedio FROM evaluacion WHERE id_Proyecto=".$resTodo['idP'];
+  	$p=$mysqli->query($prom);
+  	while ($promedio=$p->fetch_array(MYSQLI_BOTH)) {
+  		if( $promedio['promedio'] >=70)
+  		{
+  	echo'<tr>
     <td>'.$resTodo['nombrePro'].'</td>
     <td>'.$resTodo['nombreInt'].'</td>
     <td>'.$resTodo['ApellidoPaternoInt'].'</td>
     <td>'.$resTodo['ApellidoMaternoInt'].'</td>';
-  $prom = "SELECT AVG(calificacion)>70 as promedio FROM evaluacion WHERE id_Proyecto=".$resTodo['idP'];
-  $p=$mysqli->query($prom);
-  while ($promedio=$p->fetch_array(MYSQLI_BOTH)) {
-   echo  '<td>'.$promedio['promedio'].'</td>';
+  
+ 
+  	 echo  '<td>'.$promedio['promedio'].'</td>';
+  	   echo '</tr>';
 }
-   echo '</tr>';
+    
 	
 	}
+}
 	 ?>
 	 </table>
 
