@@ -21,7 +21,7 @@ session_start();
 <meta name="description" content="">
 <meta name="author" content="">
 
-	<title>Rubrica Aplicaciones Moviles</title>
+	<title>Rubrica Innovacion Social</title>
   <link rel="stylesheet" type="text/css" href="css/tablaRubrica.css">
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,12 +55,12 @@ session_start();
                 <h2>EVENTO NACIONAL ESTUDIANTIL DE INNOVACION TECNOLOGICA 2017</h2>
                 <H2>ETAPA LOCAL</H2>
                 <BR>
-                <h2> FORMATO DE EVALUACION   CATEGORIA: APLICACIONES MOVILES</h2>
+                <h2> FORMATO DE EVALUACION   CATEGORIA: INNOVACIÓN SOCIAL</h2>
                 <BR>
                 <h2> INSTITUTO TECNOLÓGICO SUPERIOR DEL OCCIDENTE DEL ESTADO DE HIDALGO</h2>
              <p><center>  
      
-         <form name="frmHoja1" action="enviarRubricaAp.php" method="POST">
+         <form name="frmHoja2" action="enviarRubricaInn.php" method="POST">
          <table class="tablaRubrica">
               <tr>
               <td>Nombre de usuario : <?php echo $_SESSION['usuario']['nombre'] ?> </td>
@@ -86,7 +86,7 @@ session_start();
                 <td>PUNTACION ASIGNADA POR EL EVALUADOR</td>
                 </tr>
                 <tr>
-                <td>Evaluació en línea (Evaluación documental</td>
+                <td>Evaluación en línea (Evaluación documental</td>
                 <td></td>
                 <td>20</td>
                 <td ><p id="evLinea"></p></td>
@@ -95,19 +95,19 @@ session_start();
                 <td>Impacto del proyecto en el sector estratégico</td>
                 <td>0</td>
                 <td>5</td>
-                <td><input type="text" required pattern="[0-5]{1,1}" placeholder="Asigne Puntuacion" id="p1.1" size=15 onchange="validarSiNumero(this.value);"></td>
+                <td><input type="text" required pattern="[0-5]{1}" placeholder="Asigne Puntuacion" id="p1.1" size=15 onchange="validarSiNumero(this.value);"></td>
                 </tr>
                    <tr>
                 <td>Descripción de la problemática identificada</td>
                 <td>0</td>
                 <td>7</td>
-                <td><input type="text" required pattern="[0-7]{1,1}" placeholder="Asigne Puntuacion" id="p1.2" size=15 onchange="validarSiNumero(this.value);"></td>
+                <td><input type="text" required pattern="[0-7]{1}" placeholder="Asigne Puntuacion" id="p1.2" size=15 onchange="validarSiNumero(this.value);"></td>
                 </tr>
                 <tr>
                 <td>Estado de la técnica (Estado del arte)</td>
                 <td>0</td>
                 <td>8</td>
-                <td><input type="text" required pattern="[0-8]{1,1}" placeholder="Asigne Puntuacion" id="p1.3" size=15 onchange="validarSiNumero(this.value);"></td>
+                <td><input type="text" required pattern="[0-8]{1}" placeholder="Asigne Puntuacion" id="p1.3" size=15 onchange="validarSiNumero(this.value);"></td>
                 </tr>
                 <tr>
                 <td>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  </td>
@@ -138,13 +138,19 @@ session_start();
                 </tr>
                   <td>Estrategia de propiedad intelectual</td>
                 <td>0</td>
-                <td>10</td>
-                <td><input type="text" required pattern="[0-9]{1,60}" placeholder="Asigne Puntuacion" id="p2.4" size=15 onchange="validarSiNumero(this.value);"></td>
+                <td>5</td>
+                <td><input type="text" required pattern="[0-5]{1}" placeholder="Asigne Puntuacion" id="p2.4" size=15 onchange="validarSiNumero(this.value);"></td>
                 </tr>
+                     <td>Viabilidad Financiera</td>
+                <td>0</td>
+                <td>8</td>
+                <td><input type="text" required pattern="[0-8]{1}" placeholder="Asigne Puntuacion" id="p2.5" size=15 onchange="validarSiNumero(this.value);"></td>
+                </tr>
+
                   <td>Habilidades para la presentacion y defensa de proyecto</td>
                 <td>0</td>
-                <td>10</td>
-                <td><input type="text" required pattern="[0-9]{1,60}" placeholder="Asigne Puntuacion" id="p2.5" size=15 onchange="validarSiNumero(this.value);"></td>
+                <td>7</td>
+                <td><input type="text" required pattern="[0-7]{1}" placeholder="Asigne Puntuacion" id="p2.6" size=15 onchange="validarSiNumero(this.value);"></td>
                 </tr>
                <tr>
                 <td>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  </td>
@@ -208,17 +214,18 @@ session_start();
         var num6 = parseInt(document.getElementById('p2.3').value);
        var num7 = parseInt(document.getElementById('p2.4').value);
        var num8 = parseInt(document.getElementById('p2.5').value);
+       var num11 = parseInt(document.getElementById('p2.6').value);
        var num9 = parseInt(document.getElementById('p3.1').value);
        var num10 = parseInt(document.getElementById('p3.2').value);
    var resul1,resul2,resul3,result;
    resul1= num1+num2+num3;
-   resul2= num4+num5+num6+num7+num8;
+   resul2= num4+num5+num6+num7+num8+num11;
    resul3= num9+num10;
    result= resul1+resul2+resul3;
    document.getElementById("evLinea").innerHTML=resul1;
    document.getElementById("evPre").innerHTML=resul2;
    document.getElementById("PrueCo").innerHTML=resul3;
-   document.frmHoja1.calificacion.value=result;
+   document.frmHoja2.calificacion.value=result;
    document.getElementById("calificacionP").innerHTML=result;
       }
     </script>
