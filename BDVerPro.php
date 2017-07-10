@@ -18,8 +18,36 @@
          	while ($fila = mysql_fetch_array($resultado)) {
          		echo "<tr>";
                echo  "<label> $fila[nombrePro] </label>";
-         		echo "</tr>";		
-         	} 
-         }
+               echo "</tr>";	
+
+               echo "<tr>";
+               echo "<label>";
+               echo  "<a href=$fila[fichaTecnica]> $fila[fichaTecnica] </a>";
+               echo "</label>";
+               echo "</tr>";
+
+         
+               $query1= "SELECT documentacion.Documentacion  FROM proyecto, equipodocumentacion, documentacion 
+              where proyecto.id_Equipo = equipodocumentacion.id_Equipo and equipodocumentacion.id_Documentacion
+              =documentacion.id_Documentacion and proyecto.id_Proyecto =".$fila['id_Proyecto'];
+              $resultadoDocs = mysql_query($query1);
+
+            while ($filaDocs = mysql_fetch_array($resultadoDocs)) {
+               echo "<tr>";
+               echo "<label>";
+               echo  "<a href=$filaDocs[Documentacion]>$filaDocs[Documentacion]</a>";
+               echo "</label>";
+               echo "</tr>"; 
+            } 
+         } 
+
+         if ($fila == null){
+               echo "<tr>";
+               echo "<label>No se le a asignado en ningun Proyecto";
+               echo "</label>";
+               echo "</tr>";  
+            }
+   }
+
  }
  ?>

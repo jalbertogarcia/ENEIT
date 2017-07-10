@@ -10,11 +10,11 @@
          	mysql_select_db($db, $con) or die ("No se encontro la base de datos");
          	$query = "SELECT * FROM proyecto";
          	$resultado = mysql_query($query);
-            echo "<select name='proyecto'>";
+            echo "<select name='id_proyecto'>";
             echo "<option value='seleciona'>--Seleciona Proyecto--</option>";
          	while ($fila = mysql_fetch_array($resultado)) {
          		
-               echo "<option value='proyecto' id='id_proyecto' name='id_Proyecto'>$fila[id_Proyecto] $fila[nombrePro]</option>";
+               echo "<option value='id_proyecto' id='id_proyecto' name='id_Proyecto'>$fila[id_Proyecto].-$fila[nombrePro]</option>";
          		
          	}
             echo "</select>"; 

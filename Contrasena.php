@@ -24,18 +24,18 @@
             <!--Mi Diseño--> 
              <table>
                 <tr>
-                <label>Correo</label>
-                <input type="text" name="correo" id="correo" placeholder="Escribe tu correo" required>
+                <label>Escribe tu Correo</label>
+                <input type="text" name="correo" id="correo" placeholder="correo@ejemplo.com" required pattern="[A-Za-z0-9_\-@\.]">
                 </tr>
 
                 <tr>
                 <label>Contraseña nueva:</label>
-                 <input type="password" name="passwordnuevo" id="passwordnuevo" placeholder="Escribe tu contraseña nueva" required>  
+                 <input type="password" name="passwordnuevo" id="passwordnuevo" placeholder="Escribe tu contraseña nueva" required pattern="[A-Za-z0-9_\-@\.]{1,50}"/>  
                 </tr>
 
                 <tr>
                  <label>Confirmar contraseña:</label>
-                 <input type="password" name="passwordnuevo1" id="passwordnuevo1" placeholder="Confirmar contraseña nueva" required>
+                 <input type="password" name="passwordnuevo1" id="passwordnuevo1" placeholder="Confirmar contraseña nueva" required pattern="[A-Za-z0-9_\-@\.]{1,50}"/>
                 </tr>
 
                 </tr> 
