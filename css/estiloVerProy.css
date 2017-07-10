@@ -22,6 +22,16 @@ h1{
 	border-radius: 7px;
 	font-size:30;
 	margin-bottom: 20px;
+	font-family: Arial Black;
+}
+
+h2{
+	color: Black;
+	text-align: center;
+	border-radius: 7px;
+	font-size:25;
+	margin-bottom: 20px;
+	font-family: Arial Black;
 }
 
 input, textarea{
@@ -37,6 +47,9 @@ label{
 	font-size: 20px;
 	display: block;
 	width: 100%;
-	color: Red;
+	color: Black;
+	font-family: Century Gothic;
 
 }
+
+
