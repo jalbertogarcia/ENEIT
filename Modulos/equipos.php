@@ -4,7 +4,7 @@ require("../conexion.php");
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
+<meta charset="utf8">
 <link rel="stylesheet" type="text/css" href="../css/estilos2.css">
 	<title></title>
 	<script>
@@ -49,7 +49,7 @@ require("../conexion.php");
 	 <form id="frmEvaluadores" name="frmEvaluadores" method="post">
 
 	 <p><b>Evaluadores</b></p>
-     <table border="1">
+     <table border="0">
      	<tr>
      		<td id="eval">Evaluador:</td>
      		<td id="eval">
@@ -72,10 +72,22 @@ else {
      		</td>
      	</tr>
      	<tr> <td id="eval">Equipo:</td>
-     	     <td id="eval"> <select name="equipo" id="equipo">
-             <option value="Equipo1" >No. 1</option>
-             <option value="Equipo2" >No. 2</option>
-             <option value="Equipo3" >No. 3</option>
+     	     <td id="eval"> 
+     	     <select name="equipo" id="equipo">
+     	      <?php
+           $equi = "SELECT * FROM equipo";
+           $bus = $mysqli->query($equi);
+           if ($bus->num_rows > 0) {
+    // output data of each row
+	while($fila = $bus->fetch_assoc()) {
+		echo "<option value= ".$fila["id_Equipo"].">" .$fila['nombre']."</option>";
+	}
+}
+else {
+    echo "Ocurrió algún error :(";
+}
+?>   
+            
                  </select>
                  </td>
      	</tr>
@@ -87,48 +99,7 @@ else {
 
 <div id="equipos">
 	 	<p><b>Equipos</b></p> <br>
-	 <table border="1" id="eq1">
-	 <tr>
-	 	<th>Equipo 1.</th>
-        <th colspan="3"></th>
-
-	 </tr>
-	 	<tr>
-	 		<td id="num">No.</td>
-	 		<td id="nom">Nombre</td>
-	 		<td id="tit">Título</td>
-	 		<td id="esp">Especialidad</td>
-	 	</tr>
-	 </table>
-
-	 <table border="1" id="eq2">
-	 <tr>
-	 	<th>Equipo 2.</th>
-        <th colspan="3"></th>
-
-	 </tr>
-	 	<tr>
-	 		<td id="num">No.</td>
-	 		<td id="nom">Nombre</td>
-	 		<td id="tit">Título</td>
-	 		<td id="esp">Especialidad</td>
-	 	</tr>
-	 </table>
-
-	 <table border="1" id="eq3">
-	 <tr>
-	 	<th>Equipo 3.</th>
-        <th colspan="3"></th>
-
-	 </tr>
-	 	<tr>
-	 		<td id="num">No.</td>
-	 		<td id="nom">Nombre</td>
-	 		<td id="tit">Título</td>
-	 		<td id="esp">Especialidad</td>
-	 	</tr>
-	 </table>
-	 		 
+	 	 		 
 	 </div>
 	 <div id="info_proyecto">
 	 	<p><b>Proyectos</b></p> <br>
