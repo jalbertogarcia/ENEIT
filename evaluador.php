@@ -79,9 +79,6 @@ session_start();
                     <li class="page-scroll">
                         <a href="selecionar.php" target="contenido">Rubrica Evaluacion</a>
                     </li>
-                     <li class="page-scroll">
-                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Evaluador</a>
-                    </li>
                     <li class="page-scroll">
                         <a href="Contrasena.php" target="contenido">Cambiar contraseña</a>
                     </li>                 
