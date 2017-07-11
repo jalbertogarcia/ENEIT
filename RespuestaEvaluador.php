@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+
 session_start();
 
   if (isset($_SESSION['usuario'])) {
@@ -19,7 +19,7 @@ if(!$resultado){
     echo 'Error de Consulta ';
 }else{
     echo 'OK';
-    header('Location: RespuestaEvaluador.html')
+    header('Location: RespuestaEvaluador.html');
 }
 
 

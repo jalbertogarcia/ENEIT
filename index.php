@@ -12,7 +12,7 @@ session_start();
             echo 'Error de Consulta ';
             }else{
                   echo 'OK';
-                  header('Location: RespuestaEvaluador.html')
+                  header('Location: RespuestaEvaluador.html');
             }
         
   	}
