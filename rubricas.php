@@ -80,7 +80,7 @@ require("conexion.php");
      	<tr>
      		<td id="eval">Elije Equipo:</td>
      		<td id="eval">
-     	    <select name="equipo" id="equipo">
+     	    <select name="id_Equipo" id="id_Equipo">
          	 <?php
    $sql = "SELECT * FROM equipoeva ";
    $result = $mysqli->query($sql);
@@ -88,7 +88,7 @@ require("conexion.php");
 if ($result->num_rows > 0) {
     // output data of each row
 	while($row = $result->fetch_assoc()) {
-		echo "<option value= ".$row["id_EquipoEva"].">" .$row['nombre']."</option>";
+		echo "<option value= ".$row["id_Equipo"].">" .$row['nombre']."</option>";
 	}
 }
 else {
@@ -101,7 +101,7 @@ else {
      	     	<tr>
      		<td id="eval">Elije Rubrica:</td>
      		<td id="eval">
-     	    <select name="rubrica" id="rubrica">
+     	    <select name="id_Documentacion" id="id_Documentacion">
          	 <?php
    $sql = "SELECT * FROM documentacion ";
    $result = $mysqli->query($sql);
