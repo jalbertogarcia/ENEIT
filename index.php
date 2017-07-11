@@ -6,18 +6,20 @@ session_start();
   	if ($_SESSION['usuario']['tipo']=="Coordinador") {
   		header('location: Coordinador.php');
   	}else if($_SESSION['usuario']['tipo']=="Evaluador"){
+      $SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
       $resultado = mysqli_query ($conexion, $SQL);
+
         if(!$resultado){
             header('location: evaluador.php');
-            echo 'Error de Consulta ';
+            
             }else{
-                  echo 'OK';
-                  header('Location: RespuestaEvaluador.html')
+                  header('Location: RespuestaEvaluador.html');
+
             }
         
   	}
 
-    $SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
+    
 //ejecutar consulta
 
 
