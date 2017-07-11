@@ -1,25 +1,19 @@
-<?php
-include 'conexion.php'; 
+<?php 
 session_start();
-
+include 'conexion.php';
   if (isset($_SESSION['usuario'])) {
   	if ($_SESSION['usuario']['tipo']=="Coordinador") {
   		header('location: Coordinador.php');
   	}else if($_SESSION['usuario']['tipo']=="Evaluador"){
       $SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
       $resultado = mysqli_query ($conexion, $SQL);
-
         if(!$resultado){
-            header('location: evaluador.php');
-            
+            //header('Location: RespuestaEvaluador.html');
+            echo 'Error de Consulta ';
             }else{
-<<<<<<< HEAD
                   echo 'OK';
-                  header('Location: RespuestaEvaluador.html');
-=======
-                  header('Location: RespuestaEvaluador.html');
+                  ///header('location: evaluador.php');
 
->>>>>>> 10443f7ec4466b3388b246bf158c7c2de4223ca2
             }
         
   	}
