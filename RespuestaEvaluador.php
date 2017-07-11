@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
   if (isset($_SESSION['usuario'])) {
@@ -11,19 +10,6 @@ session_start();
   }else{
     header('Location: index.php');
   }
-
-$SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
-//ejecutar consulta
-$resultado = mysqli_query ($conexion, $SQL);
-if(!$resultado){
-    echo 'Error de Consulta ';
-}else{
-    echo 'OK';
-    header('Location: RespuestaEvaluador.html');
-}
-
-
-
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +74,7 @@ if(!$resultado){
 
                     </li>
                     <li class="page-scroll">
-                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Evaluador</a>
+                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Eval</a>
                     </li>
                    
                     </li>                 
