@@ -8,7 +8,7 @@
            $respuestas=$_POST["respuestaRadio"];
            
            if($respuestas=="Si"){
-             action="Contrasena.php"
+             action="Contrasena.php";
 
            }
 
