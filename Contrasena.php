@@ -25,7 +25,7 @@
              <table>
                 <tr>
                 <label>Escribe tu Correo</label>
-                <input type="text" name="correo" id="correo" placeholder="correo@ejemplo.com" required pattern="[A-Za-z0-9_\-@\.]">
+                <input type="text" name="correo" id="correo" placeholder="correo@ejemplo.com">
                 </tr>
 
                 <tr>
