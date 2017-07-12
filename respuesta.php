@@ -6,7 +6,11 @@
           if(isset($_POST['respuestaRadio']))
           {
            $respuestas=$_POST["respuestaRadio"];
+           
+           if($respuestas=="Si"){
+             action="Contrasena.php";
 
+           }
 
            $insertar =  "INSERT INTO  respuesta (status) VALUES ('$respuestas')"; 
            $resu = mysqli_query($conexion, $insertar);
