@@ -3,7 +3,7 @@ session_start();
 
   if (isset($_SESSION['usuario'])) {
   	if ($_SESSION['usuario']['tipo']=="Coordinador"){
-  		//header('location: Coordinador.php');
+  		header('location: Coordinador.php');
     }else if($_SESSION['usuario']['tipo']=="Evaluador"){
       include 'conexion.php';
       $SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
@@ -13,7 +13,7 @@ session_start();
             echo 'Error de Consulta ';
             }else{
                   echo 'OK';
-                  //header('location: evaluador.php');
+                  header('location: evaluador.php');
 
             }
        
@@ -21,8 +21,6 @@ session_start();
     
   }
 }
-
-
 
  ?>
 <!DOCTYPE html>
@@ -47,5 +45,6 @@ session_start();
  </div>
  <script src="js/jquery-3.1.1.min.js"></script>
  <script src="main.js"></script>
-</body>
+
+ </body>
 </html>

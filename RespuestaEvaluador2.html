@@ -2,14 +2,16 @@
 session_start();
 
   if (isset($_SESSION['usuario'])) {
-    if ($_SESSION['usuario']['tipo'] != "Evaluador") {
-        header('Location: Coordinador.php');
+    if ($_SESSION['usuario']['tipo'] != "Coordinador") {
+        header('Location: Evaluador.php');
     }else{
         header('Location: ');
     } 
   }else{
     header('Location: index.php');
   }
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,16 +67,10 @@ session_start();
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
 
-                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica de Evaluacion</a>
-
-
-                        <a href="#page-top" target="contenido"></a>
-
-                        <a href="AplicacioesMovilesRubrica.php" target="contenido">Rubrica de Evaluacion</a>
 
                     </li>
                     <li class="page-scroll">
-                        <a href="RespuestaEvaluador.html" target="contenido">Respuesta Eval</a>
+                        <a href="RespuestaEvaluador.html" target="/contenido">Respuesta Eval</a>
                     </li>
                    
                     </li>                 
