@@ -14,10 +14,13 @@ jQuery(document).on('submit','#formlg', function(event){
 		console.log(respuesta);
 		if (!respuesta.error) {
 			if (respuesta.tipo=='Coordinador') {
-               location.href= 'Coordinador.php';
+				location.href= 'Coordinador.php';
+				
+              	
 
 			}else if (respuesta.tipo=='Evaluador') {
-                 location.href='evaluador.php';
+               
+               Location.href='evaluador.php';
 			}
 
 		}else{
