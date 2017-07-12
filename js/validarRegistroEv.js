@@ -1,13 +1,14 @@
-function validar(){
+3function validar(){
 	var nombre, correo, numTelefonico, especialidad, titulo, institucion;
 	nombre= document.getElementById("nombre").value;
 	correo= document.getElementById("correo").value;
 	numTelefonico= document.getElementById("numTelefonico").value;
-	especialidad= document.getElementById("especialidad").value;
+	select= document.getElementById("especialidad").selectIndex;
 	titulo= document.getElementById("titulo").value;
 	institucion= document.getElementById("institucion").value;
 	
     expresion = /\w+@\w+\.+[a-z]/;
+    expresion1 = /[0-9]/;
 	
 	if(nombre === "" || correo === "" || numTelefonico === "" || especialidad === "" || titulo === "" || institucion === "" ||){
 		alert("El campo nombre está vacio");
@@ -20,11 +21,9 @@ function validar(){
 	else if(correo.length>100){
 		alert ("El correo es muy largo");
 	}
-	else if(!expresion.test(correo)){
-		alert ("El correono es valido");
-	}
-	else if(numTelefonico.length>30){
+	else if(numTelefonico.length>10){
 		alert ("El telefono es muy largo");
+		return false;
 	}
 	else if(especialidad.length>30){
 		alert ("Elige");
@@ -35,8 +34,8 @@ function validar(){
 	else if(institucion.length>30){
 		alert ("Elige");
 	}
-	else if(isNaN(numTelefonico)){
-       alert("No estas ingresando numeros en el telefono");
-       return false;
+	else if (!isNaN(numTelefonico)){
+		alert("El telefono esta muy largo ");
+		return false;
 	}
 }
