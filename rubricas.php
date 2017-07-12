@@ -82,7 +82,7 @@ require("conexion.php");
      		<td id="eval">
      	    <select name="id_Equipo" id="id_Equipo">
          	 <?php
-   $sql = "SELECT * FROM equipoeva ";
+   $sql = "SELECT * FROM equipo ";
    $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
