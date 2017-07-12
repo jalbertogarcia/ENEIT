@@ -2,9 +2,11 @@
 session_start();
 include 'conexion.php';
 //$user=$_SESSION['usuario']['id_Usuario'];
-$password1= $_POST ["passwordnuevo"];
-$correo =$_POST["correo"];
-$SQL=  "UPDATE usuario SET password1='$password1' WHERE '$correo'=usuario.correo";
+$usuario= $_POST ["passwordnuevo"];
+$passwordnuevo1 =$_POST["passwordnuevo1"];
+$passwordnuevo =$_POST["passwordnuevo"];
+
+$SQL=  "UPDATE usuario SET passwordnuevo1='$passwordnuevo1' WHERE $passwordnuevo1=ususario.passwordnuevo1'";
 //ejecutar consulta
 $resultado = mysqli_query ($conexion, $SQL);
 if(!$resultado){
