@@ -27,10 +27,6 @@
 
                 <label>Contraseña </label>
                 <input type="password" name="Contraseña" id="Contraseña" placeholder="Introduzca la contraseña" required >
-
-                <label>Escribe tu Correo</label>
-                <input type="text" name="correo" id="correo" placeholder="correo@ejemplo.com">
-
                 </tr>
 
                 <tr>
