@@ -12,17 +12,21 @@ jQuery(document).on('submit','#formlg', function(event){
 	})
 	.done(function(respuesta){
 		console.log(respuesta);
+
 		if (!respuesta.error) {
-			if (respuesta.tipo=='Coordinador') {
+			/*if (respuesta.status==NULL) {
+				location.href= 'RespuestaEvaluador.html';
+			} else{*/
+			 if(respuesta.tipo=='Coordinador') {
 				location.href= 'Coordinador.php';
 				
               	
 
 			}else if (respuesta.tipo=='Evaluador') {
                
-               Location.href='evaluador.php';
-			}
+               Location.href='evaluador.php';}
 
+//}
 		}else{
 			$('.error').slideDown('slow');
 			setTimeout(function(){

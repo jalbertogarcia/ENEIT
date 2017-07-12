@@ -1,12 +1,15 @@
 <?php
 session_start();
-
+ if ($_SESSION['usuario']['status']==""){
+      header('location: RespuestaEvaluador.html');
+    }
   if (isset($_SESSION['usuario'])) {
     if ($_SESSION['usuario']['tipo'] != "Evaluador") {
         header('Location: Coordinador.php');
     }else{
         header('Location: ');
     } 
+    
   }else{
     header('Location: index.php');
   }

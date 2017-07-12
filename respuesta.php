@@ -1,7 +1,9 @@
 <?php
         session_start();
+        $id=$_SESSION['usuario']['id_Usuario'];
         include 'conexion.php';
         include 'config.inc.php';
+
         /*$SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
           $resultado = mysqli_query ($conexion, $SQL);
         if(!$resultado){
@@ -17,22 +19,20 @@
           if(isset($_POST['respuestaRadio']))
           {
            $respuestas=$_POST["respuestaRadio"];
+           if($respuestas=="Si"){
 
-           $insertaAct =  "INSERT INTO  respuesta (status) VALUES ('$respuestas')"; 
+           $insertaAct =  "UPDATE  usuario SET status='Si' WHERE id_Usuario=$id"; 
            $resu = mysqli_query($conexion, $insertaAct);
-           if("$respuestas"=="Si"){
-
-            header('location: Contrasena.php');
-          }
+           header('location: Contrasena.php');
+           }
            else{
+            $insertaAct =  "UPDATE  usuario SET status='No' WHERE id_Usuario=$id"; 
+            $resu = mysqli_query($conexion, $insertaAct);
             header('location: GraciasEvaluador.html');
 
            }
            
-           if(!$resu){
-            echo 'Error al registrar';
-            }else{
-            echo 'Registro correctoo';}
-          }
+           
         }
+      }
 ?>

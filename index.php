@@ -2,25 +2,18 @@
 session_start();
 
   if (isset($_SESSION['usuario'])) {
+    /*if ($_SESSION['usuario']['status']==""){
+      header('location: RespuestaEvaluador.html');
+    }
+    else
+    {*/
   	if ($_SESSION['usuario']['tipo']=="Coordinador"){
   		header('location: Coordinador.php');
     }else if($_SESSION['usuario']['tipo']=="Evaluador"){
-      include 'conexion.php';
-      $SQL=  "SELECT * FROM `usuario` WHERE `status` is NULL";
-      $resultado = mysqli_query ($conexion, $SQL);
-        if(!$resultado){
-            
-            echo 'Error de Consulta ';
-            }else{
-                  echo 'OK';
-                  header('location: evaluador.php');
-
-            }
-       
-
-    
+      header('location: evaluador.php');
   }
 }
+//}
 
  ?>
 <!DOCTYPE html>
