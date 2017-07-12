@@ -13,7 +13,7 @@
 
          	while ($fila = mysql_fetch_array($resultado)) {
          		echo "<tr>";
-               echo "<br><input type='checkbox' name='correos[]' value=$fila[correo] class='filled-in'/><label>$fila[nombre]--</label>";
+               echo "<br><input type='checkbox' name='Email' id='Email' value=$fila[correo] class='filled-in'/><label>$fila[nombre]--</label>";
                echo  "<label> $fila[correo] </label>";
          		echo "</tr>";		
          	} 
