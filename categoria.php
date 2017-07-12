@@ -18,13 +18,13 @@ if (isset($_POST['subir'])){
   $ApellidoPaternoAS=$_POST["ApellidoPaternoAS"];
   $ApellidoMaternoAS=$_POST["ApellidoMaternoAS"];
   //Asesor2
-  $NombreAs2=$_POST["NombreAs"];
-  $ApellidoPaternoAS2=$_POST["ApellidoPaternoAS"];
-  $ApellidoMaternoAS2=$_POST["ApellidoMaternoAS"];
+  $NombreAs2=$_POST["NombreAs2"];
+  $ApellidoPaternoAS2=$_POST["ApellidoPaternoAS2"];
+  $ApellidoMaternoAS2=$_POST["ApellidoMaternoAS2"];
   //Asesor3
   $NombreAs3=$_POST["NombreAs"];
-  $ApellidoPaternoAS3=$_POST["ApellidoPaternoAS"];
-  $ApellidoMaternoAS3=$_POST["ApellidoMaternoAS"];
+  $ApellidoPaternoAS3=$_POST["ApellidoPaternoAS3"];
+  $ApellidoMaternoAS3=$_POST["ApellidoMaternoAS3"];
 
 
 
@@ -33,21 +33,21 @@ if (isset($_POST['subir'])){
 //integrante2
 
  $nombreInt2=$_POST["nombreInt"];
-  $ApellidoPaternoInt2=$_POST["ApellidoPaternoInt"];
-  $ApellidoMaternoInt2=$_POST["ApellidoMaternoInt"];
+  $ApellidoPaternoInt2=$_POST["ApellidoPaternoInt2"];
+  $ApellidoMaternoInt2=$_POST["ApellidoMaternoInt2"];
 
 //integrante3
-  $nombreInt3=$_POST["nombreInt"];
-  $ApellidoPaternoInt3=$_POST["ApellidoPaternoInt"];
-  $ApellidoMaternoInt3=$_POST["ApellidoMaternoInt"];
+  $nombreInt3=$_POST["nombreInt3"];
+  $ApellidoPaternoInt3=$_POST["ApellidoPaternoInt3"];
+  $ApellidoMaternoInt3=$_POST["ApellidoMaternoInt3"];
 //integrante4
-  $nombreInt4=$_POST["nombreInt"];
-  $ApellidoPaternoInt4=$_POST["ApellidoPaternoInt"];
-  $ApellidoMaternoInt4=$_POST["ApellidoMaternoInt"];
+  $nombreInt4=$_POST["nombreInt4"];
+  $ApellidoPaternoInt4=$_POST["ApellidoPaternoInt4"];
+  $ApellidoMaternoInt4=$_POST["ApellidoMaternoInt4"];
 //integrante5
-  $nombreInt5=$_POST["nombreInt"];
-  $ApellidoPaternoInt5=$_POST["ApellidoPaternoInt"];
-  $ApellidoMaternoInt5=$_POST["ApellidoMaternoInt"];
+  $nombreInt5=$_POST["nombreInt5"];
+  $ApellidoPaternoInt5=$_POST["ApellidoPaternoInt5"];
+  $ApellidoMaternoInt5=$_POST["ApellidoMaternoInt5"];
 
 
 

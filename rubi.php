@@ -17,6 +17,14 @@ $documentacion = $_FILES['rubricass']['name'];
             $conexion =new Conect_MySql();
             $nuevo = "INSERT INTO documentacion (Documentacion,tamano,tiposs) VALUES ('$documentacion','$tamano','$tipo')";
             $query = $conexion->execute($nuevo);
+              
+            
+
+
+
+
+
+
 
             if(!$query){
   echo 'Error al registrar';
