@@ -51,7 +51,7 @@
                <p><center>
               <table>
                 <tr>
-                <td><textarea name="textarea" rows="20" cols="60">Estimada(o) profesionista: 
+                <td><textarea id="Mensaje" name="Mensaje" rows="20" cols="60">Estimada(o) profesionista: 
 
                 Con la finalidad de dar seguimiento a la convocatoria del ENEIT 2018, el Instituto 
                 Tecnologico Superior del Occidente del Estado de Hidalgo (ITSOEH), celebra su etapa     local el dia ___ del mes ____,  del presente año.
@@ -98,5 +98,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
