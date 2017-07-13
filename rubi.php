@@ -2,6 +2,8 @@
 include 'conexion.php';
 include 'config.inc.php';
 
+
+
 if (isset($_POST['subir'])){
 
 $formato = array('.pdf');
@@ -15,7 +17,11 @@ $documentacion = $_FILES['rubricass']['name'];
     if ($documentacion != "") {
         if (copy($ruta, $destino))
             $conexion =new Conect_MySql();
-            $nuevo = "INSERT INTO documentacion (Documentacion,tamano,tiposs) VALUES ('$documentacion','$tamano','$tipo')";
+            $nuevo = "INSERT INTO documentacion (Documentacion,tamano,tiposs) VALUES ('Archivos_$documentacion','$tamano','$tipo')";
+              
+
+
+
             $query = $conexion->execute($nuevo);
               
             
@@ -34,6 +40,17 @@ $documentacion = $_FILES['rubricass']['name'];
 }
 }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 if (isset($_POST['Guardar'])){
 
