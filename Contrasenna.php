@@ -1,16 +1,26 @@
 <?php
 session_start();
+$id=$_SESSION['usuario']['id_usuario'];
 include 'conexion.php';
-//$user=$_SESSION['usuario']['id_Usuario'];
-$usuario= $_POST ["passwordnuevo"];
-$passwordnuevo1 =$_POST["passwordnuevo1"];
-$passwordnuevo =$_POST["passwordnuevo"];
+if(!empty($_POST['Contrasena'])){
+				$Contrasena=$_POST['Contrasena'];
+				$passwordnuevo=$_POST['passwordnuevo'];
+				$passwordnuevo1=$_POST['passwordnuevo1'];
 
-$SQL=  "UPDATE usuario SET passwordnuevo1='$passwordnuevo1' WHERE $passwordnuevo1=ususario.passwordnuevo1'";
+if($passwordnuevo==$passwordnuevo1){
+
+$SQL=mysql_query("SELECT password1 FROM usuario WHERE id_Usuario='$id'"); 
+
+    while($tarea=mysql_fetch_array($SQL)){
+					
+					mysql_query("UPDATE usuario SET Contrasena='$passwordnuevo' WHERE password1='$tarea[password1]'");
+
+//$SQL=  "UPDATE usuario SET password1=$passwordnuevo1 WHERE $passwordnuevo1=ususario.password1";
 //ejecutar consulta
-$resultado = mysqli_query ($conexion, $SQL);
-if(!$resultado){
-	echo 'Error de Contraseña ';
-}else{
-	echo 'Contraseña guardada';
-}?>
+			echo mensajes('Contraseña Cambiada Con Exito','verde');
+					
+				
+			}
+		
+		}
+?>

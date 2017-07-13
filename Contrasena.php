@@ -25,8 +25,8 @@
              <table>
                 <tr>
 
-                <label>Contraseña </label>
-                <input type="password" name="Contraseña" id="Contraseña" placeholder="Introduzca la contraseña" required >
+                <label>Contraseña actual</label>
+                <input type="password" name="Contrasena" id="Contrasena" placeholder="Introduzca la contraseña" required >
                 </tr>
 
                 <tr>
