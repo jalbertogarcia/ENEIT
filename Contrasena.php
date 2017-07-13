@@ -14,10 +14,33 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+                function validar(){
+                    var passwordnuevo = document.getElementById('passwordnuevo').value;
+                    var passwordnuevo1 = document.getElementById('passwordnuevo1').value;
+
+                    if (passwordnuevo != passwordnuevo1) {
+
+                  alert("Los passwords deben de coincidir");
+
+              
+             } else {
+
+             alert("Todo esta correcto");
+
+          
+
+           } 
+                }
+            
+                </script>
 </head>
 
 <body>
-     <form action="Contrasenna.php" method="post" onsubmit="return valida();">
+
+     <form action="Contrasenna.php" method="post" onsubmit="validar();">
+
      <h1>Contraseña</h1>
     <!-- Header -->
     <header>
@@ -36,7 +59,7 @@
 
                 <tr>
                  <label>Confirmar contraseña:</label>
-                 <input type="password" name="passwordnuevo1" id="passwordnuevo1" placeholder="Confirmar contraseña nueva" required pattern="[A-Za-z0-9_\]{1,50}"/>
+                 <input type="password" name="passwordnuevo1" id="passwordnuevo1" placeholder="Confirmar contraseña nueva" onblur="validar();"  required pattern="[A-Za-z0-9_\]{1,50}"/>
                 </tr>
 
                 </tr> 
@@ -44,7 +67,11 @@
         <!--terminacion de mi diseño-->
          <!--checar-->
         <tr>
+                    
                     <td colspan="2"><center><input type="submit" name="enviar" id="enviar" value="Cambiar" required></center></td>
+                
+
+                
                 </tr>
     </header>
 

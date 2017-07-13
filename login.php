@@ -16,7 +16,7 @@ if ($nueva_consulta = $mysqli->prepare("SELECT * FROM usuario WHERE correo=? AND
    if ($resultado->num_rows==1) {
    	$datos=$resultado->fetch_assoc();
    	$_SESSION['usuario'] = $datos;
-    $_SESSION['id_usuario'] = $datos['id_usuario'];
+    $_SESSION['id_usuario'] = $datos['id_Usuario'];
     $_SESSION['nombre']=$datos['nombre'];
     $_SESSION['tipo']=$datos['tipo'];
     $_SESSION['status']=$datos['status'];
