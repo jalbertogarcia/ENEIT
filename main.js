@@ -14,9 +14,9 @@ jQuery(document).on('submit','#formlg', function(event){
 		console.log(respuesta);
 
 		if (!respuesta.error) {
-			/*if (respuesta.status==NULL) {
+			if (respuesta.status==NULL) {
 				location.href= 'RespuestaEvaluador.html';
-			} else{*/
+			} else{
 			 if(respuesta.tipo=='Coordinador') {
 				location.href= 'Coordinador.php';
 				
@@ -25,8 +25,7 @@ jQuery(document).on('submit','#formlg', function(event){
 			}else if (respuesta.tipo=='Evaluador') {
                
                Location.href='evaluador.php';}
-
-//}
+     }
 		}else{
 			$('.error').slideDown('slow');
 			setTimeout(function(){

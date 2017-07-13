@@ -2,18 +2,18 @@
 session_start();
 
   if (isset($_SESSION['usuario'])) {
-    /*if ($_SESSION['usuario']['status']==""){
+    if ($_SESSION['usuario']['status']==""){
       header('location: RespuestaEvaluador.html');
     }
     else
-    {*/
+    {
   	if ($_SESSION['usuario']['tipo']=="Coordinador"){
   		header('location: Coordinador.php');
     }else if($_SESSION['usuario']['tipo']=="Evaluador"){
       header('location: evaluador.php');
   }
 }
-//}
+}
 
  ?>
 <!DOCTYPE html>
