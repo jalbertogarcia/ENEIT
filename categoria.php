@@ -22,7 +22,7 @@ if (isset($_POST['subir'])){
   $ApellidoPaternoAS2=$_POST["ApellidoPaternoAS2"];
   $ApellidoMaternoAS2=$_POST["ApellidoMaternoAS2"];
   //Asesor3
-  $NombreAs3=$_POST["NombreAs"];
+  $NombreAs3=$_POST["NombreAs3"];
   $ApellidoPaternoAS3=$_POST["ApellidoPaternoAS3"];
   $ApellidoMaternoAS3=$_POST["ApellidoMaternoAS3"];
 
@@ -32,7 +32,7 @@ if (isset($_POST['subir'])){
 
 //integrante2
 
- $nombreInt2=$_POST["nombreInt"];
+ $nombreInt2=$_POST["nombreInt2"];
   $ApellidoPaternoInt2=$_POST["ApellidoPaternoInt2"];
   $ApellidoMaternoInt2=$_POST["ApellidoMaternoInt2"];
 
@@ -92,9 +92,10 @@ $insertar =  "INSERT INTO  proyecto (nombrePro,categoria) VALUES ('$nombrePro', 
   
   $resultado = mysqli_query ($conexion, $insertdos);
 
-   
- 
-
+   $id_Integrante = $_POST["id_Integrante"];
+   $id_Proyecto = $_POST["id_Proyecto"];
+ $insertdosINPO = "INSERT INTO integrantesproyecto(id_Integrante,id_Proyecto) VALUES ($id_Integrante,id_Proyecto)"
+ $resus = mysql_query($conexion, $insertdosINPO);
 
 
 
